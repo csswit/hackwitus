@@ -2539,7 +2539,7 @@
 
 		#header a {
 			border-bottom-color: rgba(255, 255, 255, 0.35);
-			color: rgba(255, 255, 255, 0.8);
+			color: orange;
 		}
 
 			#header a:hover {
@@ -2582,15 +2582,42 @@
 				position: relative;
 			}
 
-		#header h1 {
+		#header h3{
+			text-transform:none;
 			font-size: 2.5em;
 			margin: 0;
 		}
 
-		#header p {
-			font-size: 1.5em;
-			line-height: 1.5em;
-			margin: 0.25em 0 0 0;
+		#header p{
+			font-weight: bold;
+			font-size: 100%;
+		}
+
+		#header img{
+			max-width: 100%;
+			height: auto;
+    	width: auto\9; /* ie8 */
+		}
+		.typed-cursor{
+		    opacity: 1;
+		    -webkit-animation: blink 0.7s infinite;
+		    -moz-animation: blink 0.7s infinite;
+		    animation: blink 0.7s infinite;
+		}
+		@keyframes blink{
+		    0% { opacity:1; }
+		    50% { opacity:0; }
+		    100% { opacity:1; }
+		}
+		@-webkit-keyframes blink{
+		    0% { opacity:1; }
+		    50% { opacity:0; }
+		    100% { opacity:1; }
+		}
+		@-moz-keyframes blink{
+		    0% { opacity:1; }
+		    50% { opacity:0; }
+		    100% { opacity:1; }
 		}
 
 /* Footer */
@@ -2762,8 +2789,8 @@
 				}
 
 				#header p {
-					font-size: 1.25em;
-					line-height: 1.65em;
+					font-size: 300%;
+					line-height: 1.5em;
 				}
 
 	}
@@ -2841,7 +2868,7 @@
 				}
 
 				#header p {
-					font-size: 1.15em;
+					font-size: 300%;
 				}
 
 		/* Footer */
@@ -3007,7 +3034,7 @@
 				}
 
 				#header p {
-					font-size: 1em;
+					font-size: 120%;
 				}
 
 		/* Footer */
