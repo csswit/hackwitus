@@ -1,51 +1,48 @@
 /*
-	Landed by HTML5 UP
+	Directive by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
 /* Basic */
 
-	body {
-		color: #ffffff;
-	}
-
-	body, html, #page-wrapper {
-		height: 100%;
+	hr {
+		border-top: solid 1px #cccccc;
 	}
 
 	blockquote {
-		border-left: solid 4px #606067;
+		border-left: solid 0.5em #cccccc;
 	}
 
-	code {
-		background: #32333b;
+/* Section/Article */
+
+	header.major {
+		border-color: #cccccc;
 	}
 
-	hr {
-		border-bottom: solid 1px #606067;
+		header.major p {
+			border-top: solid 1px #cccccc;
+		}
+
+	footer.major {
+		border-color: #cccccc;
 	}
 
-/* Icon */
+/* Button */
 
-	.icon.major {
-		-ms-behavior: url("assets/js/ie/PIE.htc");
-	}
-
-/* Image */
-
-	.image {
+	input[type="submit"],
+	input[type="reset"],
+	input[type="button"],
+	.button {
 		position: relative;
 		-ms-behavior: url("assets/js/ie/PIE.htc");
 	}
 
-		.image:before {
-			display: none;
-		}
-
-		.image img {
-			position: relative;
-			-ms-behavior: url("assets/js/ie/PIE.htc");
+		input[type="submit"].alt,
+		input[type="reset"].alt,
+		input[type="button"].alt,
+		.button.alt {
+			border: solid 1px #cccccc;
 		}
 
 /* Form */
@@ -56,139 +53,75 @@
 	select,
 	textarea {
 		position: relative;
+		border: solid 1px #cccccc;
 		-ms-behavior: url("assets/js/ie/PIE.htc");
 	}
 
-		input[type="text"]:focus,
-		input[type="password"]:focus,
-		input[type="email"]:focus,
-		select:focus,
-		textarea:focus {
-			-ms-behavior: url("assets/js/ie/PIE.htc");
-		}
+/* Image */
 
-	input[type="text"],
-	input[type="password"],
-	input[type="email"] {
-		line-height: 3em;
+	.image {
+		border: 0;
+		display: inline-block;
+		position: relative;
 	}
 
-	input[type="checkbox"],
-	input[type="radio"] {
-		font-size: 3em;
-	}
-
-		input[type="checkbox"] + label:before,
-		input[type="radio"] + label:before {
+		.image:after {
 			display: none;
 		}
 
-/* Table */
+/* Box */
 
-	table tbody tr {
-		border: solid 1px #606067;
+	.box {
+		border: solid 1px #cccccc;
 	}
-
-	table thead {
-		border-bottom: solid 1px #606067;
-	}
-
-	table tfoot {
-		border-top: solid 1px #606067;
-	}
-
-	table.alt tbody tr td {
-		border: solid 1px #606067;
-	}
-
-/* Button */
-
-	input[type="submit"],
-	input[type="reset"],
-	input[type="button"],
-	.button {
-		border: solid 1px #ffffff !important;
-	}
-
-		input[type="submit"].special,
-		input[type="reset"].special,
-		input[type="button"].special,
-		.button.special {
-			border: 0 !important;
-		}
-
-/* Goto Next */
-
-	.goto-next {
-		display: none;
-	}
-
-/* Spotlight */
-
-	.spotlight {
-		height: 100%;
-	}
-
-		.spotlight .content {
-			background: #272833;
-		}
-
-/* Wrapper */
-
-	.wrapper.style2 input[type="text"]:focus,
-	.wrapper.style2 input[type="password"]:focus,
-	.wrapper.style2 input[type="email"]:focus,
-	.wrapper.style2 select:focus,
-	.wrapper.style2 textarea:focus {
-		border-color: #ffffff;
-	}
-
-	.wrapper.style2 input[type="submit"].special:hover, .wrapper.style2 input[type="submit"].special:active,
-	.wrapper.style2 input[type="reset"].special:hover,
-	.wrapper.style2 input[type="reset"].special:active,
-	.wrapper.style2 input[type="button"].special:hover,
-	.wrapper.style2 input[type="button"].special:active,
-	.wrapper.style2 .button.special:hover,
-	.wrapper.style2 .button.special:active {
-		color: #e44c65 !important;
-	}
-
-/* Dropotron */
-
-	.dropotron {
-		background: #272833;
-		box-shadow: none !important;
-		-ms-behavior: url("assets/js/ie/PIE.htc");
-	}
-
-		.dropotron > li a, .dropotron > li span {
-			color: #ffffff !important;
-		}
-
-		.dropotron.level-0 {
-			margin-top: 0;
-		}
-
-			.dropotron.level-0:before {
-				display: none;
-			}
 
 /* Header */
 
 	#header {
-		background: #272833;
+		background-image: url("../../images/header.jpg") !important;
+		background-size: cover !important;
+		background-position: scroll !important;
+		-ms-behavior: url("assets/js/ie/backgroundsize.min.htc");
+		padding: 8em 0 !important;
+		color: #ffffff;
 	}
 
-/* Banner */
+		#header a {
+			color: inherit;
+		}
 
-	#banner {
-		height: 100%;
-	}
-
-		#banner:before {
+		#header:before {
+			content: '';
+			background-image: url("images/overlay.png");
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
 			height: 100%;
+			display: block;
+			z-index: 0;
 		}
 
-		#banner:after {
-			background-image: url("images/ie/banner-overlay.png");
+		#header > * {
+			position: relative;
+			z-index: 1;
 		}
+
+		#header .logo {
+			-ms-behavior: url("assets/js/ie/PIE.htc");
+		}
+
+/* Footer */
+
+	#footer {
+		background-image: none !important;
+		margin-top: 0 !important;
+		padding: 4em 0 !important;
+		color: #ffffff;
+	}
+
+/* Main */
+
+	#main {
+		padding: 4em 0;
+	}
