@@ -10,21 +10,44 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/bootstrap.css"/>
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 	</head>
 	<body>
 
 		<!-- Header -->
 			<div id="header">
-				<img src="images/logo1.png"></img>
-				<p><span style="color: green">$</span> <span id="welcome-text"></span></p>
+				<img src="images/logo1.png" id="logo" class="animated fadeInDown"></img>
+				<p class="typed-text"><span style="color: green">$</span> <span id="welcome-text"></span></p>
+				<div class="quick-fact">
+					<h1 class="animated bounceInLeft">/* Quick Info */</h1>
+					<div class="row">
+						<div class="col-lg-3 animated bounceInLeft">
+							<h2>//What?</h2>
+							<p>Wentworth Institute of Technology's first ever Hackathon</p>
+						</div>
+						<div class="col-lg-3 animated bounceInUp">
+							<h2>//Where?</h2>
+							<p>Ira Allen Building, <br/> 540 Parker St, Boston MA 02120</p>
+						</div>
+						<div class="col-lg-3 animated bounceInUp">
+							<h2>//When?</h2>
+							<p>9AM March 25th 2017 - 6PM March 26th 2017</p>
+						</div>
+						<div class="col-lg-3 animated bounceInRight">
+							<h2>//Interested?</h2>
+							<p><button class="btn btn-lg btn-warning"><b>Register Here!</b></button></p>
+						</div>
+					</div>
+				</div>
 			</div>
 
 		<!-- Main -->
 			<div id="main">
 
-				<header class="major container 75%">
+				<header class="major container 75% animated bounceInRight">
 					<h2>We don't just stop at imagination.
 					<br />
 					We build, create and develop.
@@ -272,7 +295,9 @@
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
+			<script src="assets/js/bootstrap.js"></script>
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.4/typed.min.js"></script>
+			<script src="https://unpkg.com/scrollreveal@3.3.2/dist/scrollreveal.min.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
 

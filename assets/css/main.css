@@ -1843,6 +1843,7 @@
 
 	p, ul, ol, dl, table, blockquote, form {
 		margin: 0 0 2em 0;
+		padding: 0px 50px 0px 50px;
 	}
 
 	h1, h2, h3, h4, h5, h6 {
@@ -1851,8 +1852,8 @@
 		letter-spacing: 0.125em;
 		line-height: 1.75em;
 		margin-bottom: 1em;
+		padding: 0px 50px 0px 50px;
 		text-transform: uppercase;
-		text-align: center;
 	}
 
 		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -2553,6 +2554,8 @@
 
 		#header h1, #header h2, #header h3, #header h4, #header h5, #header h6 {
 			color: #ffffff;
+			font-size: 1.5em;
+			text-align: left !important;
 		}
 
 		#header input[type="submit"],
@@ -2588,9 +2591,16 @@
 			margin: 0;
 		}
 
-		#header p{
+		.typed-text{
 			font-weight: bold;
 			font-size: 300%;
+			text-align: center !important;
+		}
+
+		#header div p {
+			text-align: left;
+			font-weight: bold;
+			font-size: 110%;
 		}
 
 		#header img{
@@ -2788,10 +2798,11 @@
 					font-size: 2.25em;
 				}
 
-				#header p {
+				.typed-text {
 					font-size: 300%;
 					line-height: 1.5em;
 				}
+
 
 	}
 
@@ -2864,11 +2875,16 @@
 				}
 
 				#header h1 {
-					font-size: 2em;
+					font-size: 3em;
 				}
 
-				#header p {
+
+				.typed-text {
 					font-size: 300%;
+				}
+
+				#header p{
+
 				}
 
 		/* Footer */
@@ -3033,8 +3049,12 @@
 					font-size: 1.25em;
 				}
 
-				#header p {
+				.typed-text {
 					font-size: 120%;
+				}
+
+				#header p {
+
 				}
 
 		/* Footer */

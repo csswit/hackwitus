@@ -21,9 +21,16 @@
 
 		// Disable animations/transitions until the page has loaded.
 			$body.addClass('is-loading');
+			$(".quick-fact").hide();
+			$(".typed-text").hide();
 
 			$window.on('load', function() {
 				$body.removeClass('is-loading');
+				$(".typed-text").fadeIn(2000);
+			});
+
+			$window.on('scroll', () => {
+					$(".quick-fact").show();
 			});
 
 		// Fix: Placeholder polyfill.
@@ -37,11 +44,13 @@
 				);
 			});
 			$("#welcome-text").typed({
-            strings: ["hello.(\"World\");^2000","new WIT(\"Hackathon\");^2000","date = \"March 25th - 26th 2016\"^2000","location = <a href=\"https://goo.gl/maps/qYL4bxWrB5x\">WIT.IraAllen</a>;^2000"],
+            strings: ["hello.(\"World\");^2000","new WIT(\"Hackathon\");^2000","date = \"March 25-26 2017\";^2000","location = <a href=\"https://goo.gl/maps/qYL4bxWrB5x\">WIT.IraAllen</a>;^2000","hype.isJoined ?"],
             typeSpeed: 50,
 						cursorChar: "_",
-						loop:false
-
+						loop:false,
+						callback: () => {
+							$(".quick-fact").show();
+						}
         });
 	});
 
