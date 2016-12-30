@@ -2328,7 +2328,7 @@
 		-webkit-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
 		-ms-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
 		transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
-		background: #544d55;
+		background: #f49e42;
 		border-radius: 4px;
 		border: 0;
 		color: #ffffff;
@@ -2372,14 +2372,14 @@
 			input[type="reset"].alt:hover,
 			input[type="button"].alt:hover,
 			.button.alt:hover {
-				background: rgba(224, 224, 224, 0.15);
+				background: #f49e42;
 			}
 
 			input[type="submit"].alt:active,
 			input[type="reset"].alt:active,
 			input[type="button"].alt:active,
 			.button.alt:active {
-				background: rgba(224, 224, 224, 0.35);
+				background: #f49e42;
 			}
 
 		input[type="submit"].fit,
@@ -3053,8 +3053,8 @@
 					font-size: 120%;
 				}
 
-				#header p {
-
+				.warning{
+					background-color: green !important;
 				}
 
 		/* Footer */
@@ -3172,4 +3172,10 @@
 					display: none;
 				}
 
+	}
+	.hidden{
+		opacity: 0;
+	}
+	.visible{
+		opacity: 1;
 	}
