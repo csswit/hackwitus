@@ -1,0 +1,29 @@
+<div id="header">
+  <img src="images/logo1.png" id="logo" class="wow fadeInDown"></img>
+  <p class="typed-text"><span style="color: green">$</span> <span id="welcome-text"></span></p>
+  <div class="quick-fact">
+    <h1 class="wow bounceInLeft">/* Quick Info */</h1>
+    <div class="row">
+      <div class="col-lg-3 wow bounceInLeft">
+        <h2>//What?</h2>
+        <p rel="description">{{ site.event.description }}</p>
+      </div>
+      <div class="col-lg-3 wow bounceInUp">
+        <h2>//Where?</h2>
+        <p rel="location">{{site.event.location}}</p>
+      </div>
+      <div class="col-lg-3 wow bounceInUp">
+        <h2>//When?</h2>
+        <p rel="date">{{site.event.date}}</p>
+      </div>
+      <div class="col-lg-3 wow bounceInRight">
+        <h2>//Interested?</h2>
+        <p>{% for link in site.event.hero.links %}
+          {% if link.my_mlh %}
+            <a class="apply button alt" href="https://my.mlh.io/oauth/authorize?client_id={{ link.my_mlh.client_id }}&amp;redirect_uri={{ link.my_mlh.redirect_uri }}&amp;response_type=token">{{ link.text }}</a>
+          {% endif %}
+        {% endfor %}</p>
+      </div>
+    </div>
+  </div>
+</div>

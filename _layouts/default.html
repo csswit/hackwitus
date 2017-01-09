@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
+
+  <body{% if page.custom_class %} class="{{ page.custom_class }}"{% endif %}>
+    {% include trust_badge.html %}
+
+    {{ content }}
+
+    <section class="footer">
+      <div class="container text-center">
+        <h1>{{ site.event.name }}</h1>
+        <h3>&copy; 2016 {{ site.event.name }}. Template by <a href="http://html5up.net">HTML5 UP</a>.</h3>
+      </div>
+    </section>
+
+    <script src="{{ '/js/jquery-1.11.3.js' | prepend: site.baseurl | prepend: site.url }}"></script>
+		<script src="js/jquery.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/util.js"></script>
+		<script src="js/bootstrap.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.4/typed.min.js"></script>
+		<script src="https://unpkg.com/scrollreveal@3.3.2/dist/scrollreveal.min.js"></script>
+		<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+		<script src="js/main.js"></script>
+    {% include analytics/google_analytics.html ga_id=site.tracking.google_analytics %}
+  </body>
+</html>

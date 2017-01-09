@@ -1,58 +1,13 @@
-<!DOCTYPE HTML>
-<!--
-	Directive by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>HackWIT_us</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="assets/css/bootstrap.css"/>
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-	</head>
-	<body>
+---
+layout: default
+---
 
-		<!-- Header -->
-			<div id="header">
-				<img src="images/logo1.png" id="logo" class="wow fadeInDown"></img>
-				<p class="typed-text"><span style="color: green">$</span> <span id="welcome-text"></span></p>
-				<div class="quick-fact">
-					<h1 class="wow bounceInLeft">/* Quick Info */</h1>
-					<div class="row">
-						<div class="col-lg-3 wow bounceInLeft">
-							<h2>//What?</h2>
-							<p>Wentworth Institute of Technology's first ever Hackathon</p>
-						</div>
-						<div class="col-lg-3 wow bounceInUp">
-							<h2>//Where?</h2>
-							<p>Ira Allen Building, <br/> 540 Parker St, Boston MA 02120</p>
-						</div>
-						<div class="col-lg-3 wow bounceInUp">
-							<h2>//When?</h2>
-							<p>9AM March 25th 2017 - 6PM March 26th 2017</p>
-						</div>
-						<div class="col-lg-3 wow bounceInRight">
-							<h2>//Interested?</h2>
-							<p><a href="#" class="button alt">Register Here!</a></p>
-						</div>
-					</div>
-				</div>
-			</div>
-
+{% include hero.html %}
 		<!-- Main -->
 			<div id="main">
 
 				<header class="major container 75% wow bounceInRight">
-					<h2>We don't just stop at imagination.
-					<br />
-					We build, create and develop.
-					<br />
-					Join with us!</h2>
+					<h2>{{ site.event.about.description }}</h2>
 					<!--
 					<p>Tellus erat mauris ipsum fermentum<br />
 					etiam vivamus nunc nibh morbi.</p>
@@ -60,27 +15,21 @@
 				</header>
 
 				<div class="box alt container">
-					<section class="feature left">
-						<a href="#" class="wow bounceInLeft image icon fa-signal"><img src="images/pic01.jpg" alt="" /></a>
-						<div class="content wow bounceInRight">
-							<h3>What is Hackathon?</h3>
-							<p>Vitae natoque dictum etiam semper magnis enim feugiat amet curabitur tempor orci penatibus. Tellus erat mauris ipsum fermentum etiam vivamus eget. Nunc nibh morbi quis fusce lacus.</p>
-						</div>
-					</section>
-					<section class="feature right">
-						<a href="#" class="image icon fa-code wow bounceInRight"><img src="images/pic02.jpg" alt="" /></a>
-						<div class="content wow bounceInLeft">
-							<h3>Can I attend?</h3>
-							<p>Vitae natoque dictum etiam semper magnis enim feugiat amet curabitur tempor orci penatibus. Tellus erat mauris ipsum fermentum etiam vivamus eget. Nunc nibh morbi quis fusce lacus.</p>
-						</div>
-					</section>
-					<section class="feature left">
-						<a href="#" class="image icon fa-mobile wow bounceInLeft"><img src="images/pic03.jpg" alt="" /></a>
-						<div class="content wow bounceInRight">
-							<h3>is there anything I need to know?</h3>
-							<p>Vitae natoque dictum etiam semper magnis enim feugiat amet curabitur tempor orci penatibus. Tellus erat mauris ipsum fermentum etiam vivamus eget. Nunc nibh morbi quis fusce lacus.</p>
-						</div>
-					</section>
+		      {% for section in site.event.info.sections %}
+						{% if section.isRight %}
+							<section class="feature left">
+								<a href="#" class="wow bounceInLeft image icon fa-signal"><img src="{{section.image}}" alt="" /></a>
+								<div class="content wow bounceInRight">
+						{% else %}
+							<section class="feature right">
+								<a href="#" class="image icon fa-code wow bounceInRight"><img src="images/pic02.jpg" alt="" /></a>
+								<div class="content wow bounceInLeft">
+						{% endif %}
+									<h3>{{section.title}}</h3>
+									<p>{{ section.description }}</p>
+								</div>
+							</section>
+		      {% endfor %}
 				</div>
 
 				<div class="box container">
@@ -173,8 +122,24 @@
 						</header>
 						<center>
 							<p class="wow fadeIn">sponsors' icons go here</p>
-							<p><a href="#" class="button wow fadeInUpBig">Interested in Sponsor?</a></p>
+							<p>{% for link in site.event.hero.links %}
+			          {% if link.href %}
+			            <a class="button" href="{{ link.href }}">{{ link.text }}</a>
+			          {% endif %}
+			        {% endfor %}</p>
 						</center>
+					</section>
+
+					<section>
+						<header class="wow fadeInDown">
+							<h2>FAQ</h2>
+						</header>
+						{% for item in site.event.faq %}
+							<center>
+								<h5>{{ item.question }}</h5>
+								<p>{{ item.answer | markdownify }}</p>
+							</center>
+						{% endfor %}
 					</section>
 					<!-- <section>
 						<header>
@@ -240,7 +205,11 @@
 				<footer class="major container 75%  wow fadeIn">
 					<h3>What are you waiting for?</h3>
 					<ul class="actions">
-						<li><a href="#" class="button">Register for the Hype</a></li>
+						<li>{% for link in site.event.hero.links %}
+		          {% if link.my_mlh %}
+		            <a class="apply button" href="https://my.mlh.io/oauth/authorize?client_id={{ link.my_mlh.client_id }}&amp;redirect_uri={{ link.my_mlh.redirect_uri }}&amp;response_type=token">{{ link.text }}</a>
+		          {% endif %}
+		        {% endfor %}</li>
 					</ul>
 				</footer>
 
@@ -288,23 +257,5 @@
 						<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
 					</ul>
 
-					<ul class="copyright">
-						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
-
 				</div>
 			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/bootstrap.js"></script>
-			<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-			<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.4/typed.min.js"></script>
-			<script src="https://unpkg.com/scrollreveal@3.3.2/dist/scrollreveal.min.js"></script>
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="assets/js/main.js"></script>
-
-	</body>
-</html>
