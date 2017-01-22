@@ -16,7 +16,7 @@ style:
 
 # This will help you track who's visiting your website.
 tracking:
-  google_analytics: "UA-43729070-14"
+  google_analytics: "UA-90684067-1"
 
 # Let people connect & engage with you through social media.
 social:
@@ -34,6 +34,8 @@ event:
   description: "Wentworth Institute of Technology's first ever Hackathon"
   date:        "25 & 26 March 2017"
   location:    "Ira Allen Building, 540 Parker St, Boston MA 02120"
+  #set this to true when schedule is ready
+  schedule_ready: false
 
   trust_badge:
     year:   "2017"  # season year
@@ -45,63 +47,95 @@ event:
       - text: "Apply"
         my_mlh:
           client_id:    "b85972f8aa004c09989c02f10a874c51963e501106a36a676847b8490f34e226"
-          redirect_uri: "http://hackwit.us/success.html"
-      - text: "Interested in Sponsor"
+          redirect_uri: "https://hackwitus.typeform.com/to/wNQZmB"
+      - text: "Interested in sponsoring us?"
         href: "mailto:sponsorship@hackwit.us"
 
   about:
     description: >
-      WE DON'T JUST STOP AT IMAGINATION. <br />
+      WE DON'T JUST STOP AT IMAGINATION; <br />
       WE BUILD, CREATE AND DEVELOP. <br />
-      JOIN WITH US!
+      JOIN US!
+
+  schedule:
+    - title: "Saturday, March 25th 2017"
+      events:
+        - time: "9AM"
+          activity: "lorem ipsum"
+        - time: "9AM"
+          activity: "lorem ipsum"
+        - time: "9AM"
+          activity: "lorem ipsum"
+        - time: "9AM"
+          activity: "lorem ipsum"
+    - title: "Sunday, March 26th 2017"
+      events:
+        - time: "9AM"
+          activity: "lorem ipsum"
+        - time: "9AM"
+          activity: "lorem ipsum"
+        - time: "9AM"
+          activity: "lorem ipsum"
+        - time: "9AM"
+          activity: "lorem ipsum"
 
   # Info Sections
   info:
     sections:
       - image: "images/pic01.jpg"
-        title: "WHAT IS HACKATHON?"
+        title: "WHAT IS A HACKATHON?"
         isRight: true
         description: >
-          We can write something nice with a graphic (as above) to make the event more appealing.
+          A hackathon is an invention marathon. Students come together to build cool software & hardware hacks over 24-48 hours. It's [very beginner friendly](https://medium.com/@tfogo/hackathons-are-for-beginners-77a9c9c0e000#.cj21niskl).
       - image: "images/pic02.jpg"
-        title: "Can I Attend?"
+        title: "WHO CAN ATTEND?"
         isRight: false
         description: >
-          We can write something nice with a graphic (as above) to make the event more appealing.
+          Any students who are currently enrolled at a college/university or have graduated within the past 12 months are eligible to attend. Plus, it's free!
       - image: "images/pic03.jpg"
-        title: "What should I bring?"
+        title: "WHAT SHOULD I BRING?"
         isRight: true
         description: >
-          We can write something nice with a graphic (as above) to make the event more appealing.
+          Bring anything you'll need to stay overnight, as well as any technology you plan on using. We'll provide some stuff, but you can still bring your own!
+      - image: "images/pic04.jpg"
+        title: "WHERE/WHEN IS IT?"
+        isRight: false
+        description: >
+          Wentworth Institute of Technology, the Ira Allen Building, 540 Parker St, Boston MA 02120. March 25th-26th, 2017.
+
 
   # Frequently asked questions.
   faq:
-    - question: "What is a hackathon?"
-      answer: >
-        A hackathon is an invention marathon. Students come together to build cool
-        software & hardware hacks over 24-48 hours. It's [very beginner friendly](https://medium.com/@tfogo/hackathons-are-for-beginners-77a9c9c0e000#.cj21niskl).
     - question: "How much does it cost?"
       answer: >
-        Nothing. Attending a hackathon is free.
-    - question: "Do I need to be a student to attend?"
+        Nothing. Attending this hackathon is free.
+    - question: "Do I need any special skills to attend or compete?"
       answer: >
-        Yes. Only students who are currently enrolled at a college/university or
-        have graduated within the past 12 months are eligible to attend.
-    - question: "Where is the event?"
+        No, but some skills will help! Hackathons are primarily attended by people looking to pick up or improve new skills, so if you’re totally new to all of this that’s okay! We’re happy to help provide learning resources for you to take advantage of.
+    - question: "What are the rules of this competition?"
       answer: >
-        The event is being hosted at [insert venue location here].
-    - question: "What is Major League Hacking?"
+        Participants will all begin the event at the same time, and must start their projects from scratch. In addition, all participants must follow the [MLH Code of Conduct](https://static.mlh.io/docs/mlh-code-of-conduct.pdf), which will be enforced.
+    - question: "What sort of projects can be entered?"
       answer: >
-        Major League Hacking is [the official student hackathon league](https://mlh.io) in North America & Europe.
-        We work with over 200 Member Events and empower over 70,000 students every year.
-    - question: "Is there a code of conduct?"
+        Any original technical project you can think of and create will be accepted.
+    - question: "What will be provided for participants?"
       answer: >
-        Yes there is. We enforce it very strongly. You can [find it here](https://static.mlh.io/docs/mlh-code-of-conduct.pdf).
+        Food and snacks will be provided, as well as some educational, technical, and hardware resources. However, you are welcome to bring or purchase your own! We also recommend that you bring anything you may need to more comfortably stay overnight.
+    # - question: "What is Major League Hacking?"
+    #   answer: >
+    #     Major League Hacking is [the official student hackathon league](https://mlh.io) in North America & Europe.
+    #     We work with over 200 Member Events and empower over 70,000 students every year.
+    - question: "What if there is a change of plans or emergency?"
+      answer: >
+        For a change of plans, we will send an email to the email address that you give us when you sign up. You are also welcome to give us a safety contact so that in the event of an emergency we can get in touch with that individual.
+    - question: "Will there be travel reimbursements?"
+      answer: >
+        We cannot offer travel reimbursements at this time.
 
   # This is the message you'll receive once you've registered.
   register:
     message: >
-      You'll receive more information closer to the hackathon.
+      Thanks for registering! You'll receive more information closer to the hackathon.
 
 # ----------------------------------------------------
 # -- Ignore this unless you know what you're doing. --
