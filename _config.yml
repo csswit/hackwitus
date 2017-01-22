@@ -16,7 +16,7 @@ style:
 
 # This will help you track who's visiting your website.
 tracking:
-  google_analytics: "UA-43729070-14"
+  google_analytics: "UA-90684067-1"
 
 # Let people connect & engage with you through social media.
 social:
@@ -37,10 +37,10 @@ event:
   #set this to true when schedule is ready
   schedule_ready: false
 
-  trust_badge:
-    year:   "2017"  # season year
-    region: "na"    # "na" or "eu"
-    color:  "white" # "white", "black", "gray", "red", "blue" or "yellow"
+  # trust_badge:
+  #   year:   "2017"  # season year
+  #   region: "na"    # "na" or "eu"
+  #   color:  "white" # "white", "black", "gray", "red", "blue" or "yellow"
 
   hero:
     links:
@@ -101,7 +101,7 @@ event:
         title: "WHERE/WHEN IS IT?"
         isRight: false
         description: >
-          Wentworth Institute of Technology, the Ira Allen Building, 540 Parker St, Boston MA 02120. March 25th-26th, 2017.
+          Wentworth Institute of Technology, the Ira Allen Building, 540 Parker St, Boston MA 02120. <br /> March 25th-26th, 2017.
 
 
   # Frequently asked questions.

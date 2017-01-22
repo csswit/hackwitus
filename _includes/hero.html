@@ -20,10 +20,11 @@
         <h2>//Interested?</h2>
         <p>{% for link in site.event.hero.links %}
           {% if link.my_mlh %}
-            <a class="apply button alt" href="https://my.mlh.io/oauth/authorize?client_id={{ link.my_mlh.client_id }}&amp;redirect_uri={{ link.my_mlh.redirect_uri }}&amp;response_type=token">{{ link.text }}</a>
+            <a class="apply button alt" href="{{link.my_mlh.redirect_uri}}">{{ link.text }}</a>
           {% endif %}
         {% endfor %}</p>
       </div>
     </div>
   </div>
 </div>
+<!-- https://my.mlh.io/oauth/authorize?client_id={{ link.my_mlh.client_id }}&amp;redirect_uri={{ link.my_mlh.redirect_uri }}&amp;response_type=token -->

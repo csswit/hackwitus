@@ -8,10 +8,7 @@ layout: default
 
 				<header class="major container 75% wow bounceInRight">
 					<h2>{{ site.event.about.description }}</h2>
-					<!--
-					<p>Tellus erat mauris ipsum fermentum<br />
-					etiam vivamus nunc nibh morbi.</p>
-					-->
+
 				</header>
 
 				<div class="box alt container">
@@ -26,94 +23,45 @@ layout: default
 								<div class="content wow bounceInLeft">
 						{% endif %}
 									<h3>{{section.title}}</h3>
-									<p>{{ section.description }}</p>
+									<p>{{section.description | markdownify }}</p>
 								</div>
 							</section>
 		      {% endfor %}
 				</div>
 
 				<div class="box container">
-					<!-- <header>
-						<h2>A lot of generic stuff</h2>
-					</header> -->
-					<!-- <section>
-						<header>
-							<h3>Blockquote</h3>
-						</header>
-						<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget.
-						tempus euismod. Vestibulum ante ipsum primis in faucibus.</blockquote>
-					</section> -->
+
 					<section>
 							<header class="wow bounceInDown">
 								<h2>Schedule</h2>
 							</header>
-							<section>
-								<header class="wow fadeInDown">
-									<h3>Saturday, March 25th 2017</h3>
-								</header>
-								<div class="table-wrapper">
-									<table class="default wow fadeIn">
-										<thead>
-											<tr>
-												<th>Time</th>
-												<th>Activities</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td>45815</td>
-												<td>Something</td>
-											</tr>
-											<tr>
-												<td>24524</td>
-												<td>Nothing</td>
-											</tr>
-											<tr>
-												<td>45815</td>
-												<td>Something</td>
-											</tr>
-											<tr>
-												<td>24524</td>
-												<td>Nothing</td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
-							</section>
-						<hr />
-							<section>
-								<header class="wow fadeInDown">
-									<h3>Sunday, March 26th 2017</h3>
-								</header>
-								<div class="table-wrapper">
-									<table class="default wow fadeIn">
-										<thead>
-											<tr>
-												<th>Time</th>
-												<th>Activities</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td>45815</td>
-												<td>Something</td>
-											</tr>
-											<tr>
-												<td>24524</td>
-												<td>Nothing</td>
-											</tr>
-											<tr>
-												<td>45815</td>
-												<td>Something</td>
-											</tr>
-											<tr>
-												<td>24524</td>
-												<td>Nothing</td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
-							</section>
+							{% if event.schedule_ready %}
+								{% for day in site.event.schedule%}
+									<header class="wow fadeInDown">
+										<h3>{{day.title}}</h3>
+									</header>
+									<div class="table-wrapper">
+										<table class="default wow fadeIn">
+											<thead>
+												<tr>
+													<th>Time</th>
+													<th>Activities</th>
+												</tr>
+											</thead>
+											<tbody>
+												{% for event in day.events %}
+													<tr>
+														<td>{{event.time}}</td>
+														<td>{{event.activity}}</td>
+													<tr>
+												{% endfor %}
+											</tbody>
+										</table>
+									</div>
+								{% endfor %}
+							{% else %}
+								<center><p>TBD</p><center>
+							{% endif %}
 					</section>
 					<section>
 						<header class="wow fadeInDown">
@@ -121,7 +69,6 @@ layout: default
 							<p>We are proud to have these sponsors</p>
 						</header>
 						<center>
-							<p class="wow fadeIn">sponsors' icons go here</p>
 							<p>{% for link in site.event.hero.links %}
 			          {% if link.href %}
 			            <a class="button" href="{{ link.href }}">{{ link.text }}</a>
@@ -141,65 +88,6 @@ layout: default
 							</center>
 						{% endfor %}
 					</section>
-					<!-- <section>
-						<header>
-							<h3>Unordered List</h3>
-						</header>
-						<ul class="default">
-							<li>Donec consectetur vestibulum dolor et pulvinar. Etiam vel felis enim, at viverra ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel.</li>
-							<li>Donec consectetur vestibulum dolor et pulvinar. Etiam vel felis enim, at viverra ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel.</li>
-							<li>Donec consectetur vestibulum dolor et pulvinar. Etiam vel felis enim, at viverra ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel.</li>
-							<li>Donec consectetur vestibulum dolor et pulvinar. Etiam vel felis enim, at viverra ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel.</li>
-						</ul>
-					</section> -->
-					<!-- <section>
-						<header>
-							<h3>Ordered List</h3>
-						</header>
-						<ol class="default">
-							<li>Donec consectetur vestibulum dolor et pulvinar. Etiam vel felis enim, at viverra ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel.</li>
-							<li>Donec consectetur vestibulum dolor et pulvinar. Etiam vel felis enim, at viverra ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel.</li>
-							<li>Donec consectetur vestibulum dolor et pulvinar. Etiam vel felis enim, at viverra ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel.</li>
-							<li>Donec consectetur vestibulum dolor et pulvinar. Etiam vel felis enim, at viverra ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel.</li>
-						</ol>
-					</section> -->
-					<!-- <section>
-						<header>
-							<h3>Form</h3>
-						</header>
-						<form method="post" action="#">
-							<div class="row">
-								<div class="6u 12u(mobilep)">
-									<label for="name">Name</label>
-									<input class="text" type="text" name="name" id="name" value="" placeholder="John Doe" />
-								</div>
-								<div class="6u 12u(mobilep)">
-									<label for="email">Email</label>
-									<input class="text" type="text" name="email" id="email" value="" placeholder="johndoe@domain.tld" />
-								</div>
-							</div>
-							<div class="row">
-								<div class="12u">
-									<label for="subject">Subject</label>
-									<input class="text" type="text" name="subject" id="subject" value="" placeholder="Enter your subject" />
-								</div>
-							</div>
-							<div class="row">
-								<div class="12u">
-									<label for="subject">Message</label>
-									<textarea name="message" id="message" placeholder="Enter your message" rows="6"></textarea>
-								</div>
-							</div>
-							<div class="row">
-								<div class="12u">
-									<ul class="actions">
-										<li><input type="submit" value="Send" /></li>
-										<li><input type="reset" value="Reset" class="alt" /></li>
-									</ul>
-								</div>
-							</div>
-						</form>
-					</section> -->
 				</div>
 
 				<footer class="major container 75%  wow fadeIn">
@@ -207,7 +95,7 @@ layout: default
 					<ul class="actions">
 						<li>{% for link in site.event.hero.links %}
 		          {% if link.my_mlh %}
-		            <a class="apply button" href="https://my.mlh.io/oauth/authorize?client_id={{ link.my_mlh.client_id }}&amp;redirect_uri={{ link.my_mlh.redirect_uri }}&amp;response_type=token">{{ link.text }}</a>
+		            <a class="apply button" href="{{link.my_mlh.redirect_uri}}">{{ link.text }}</a>
 		          {% endif %}
 		        {% endfor %}</li>
 					</ul>
@@ -223,13 +111,13 @@ layout: default
 						<h2>Questions or comments?</h2>
 					</header>
 
-					<form method="post" action="#">
+					<form method="post" action="https://formspree.io/contact@hackwit.us">
 						<div class="row">
 							<div class="6u 12u(mobilep)">
 								<input type="text" name="name" placeholder="Name" />
 							</div>
 							<div class="6u 12u(mobilep)">
-								<input type="email" name="email" placeholder="Email" />
+								<input type="email" name="_replyto" placeholder="Email" />
 							</div>
 						</div>
 						<div class="row">
@@ -256,3 +144,78 @@ layout: default
 
 				</div>
 			</div>
+
+			<!-- <section>
+				<header>
+					<h3>Unordered List</h3>
+				</header>
+				<ul class="default">
+					<li>Donec consectetur vestibulum dolor et pulvinar. Etiam vel felis enim, at viverra ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel.</li>
+					<li>Donec consectetur vestibulum dolor et pulvinar. Etiam vel felis enim, at viverra ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel.</li>
+					<li>Donec consectetur vestibulum dolor et pulvinar. Etiam vel felis enim, at viverra ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel.</li>
+					<li>Donec consectetur vestibulum dolor et pulvinar. Etiam vel felis enim, at viverra ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel.</li>
+				</ul>
+			</section> -->
+			<!-- <section>
+				<header>
+					<h3>Ordered List</h3>
+				</header>
+				<ol class="default">
+					<li>Donec consectetur vestibulum dolor et pulvinar. Etiam vel felis enim, at viverra ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel.</li>
+					<li>Donec consectetur vestibulum dolor et pulvinar. Etiam vel felis enim, at viverra ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel.</li>
+					<li>Donec consectetur vestibulum dolor et pulvinar. Etiam vel felis enim, at viverra ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel.</li>
+					<li>Donec consectetur vestibulum dolor et pulvinar. Etiam vel felis enim, at viverra ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel.</li>
+				</ol>
+			</section> -->
+			<!-- <section>
+				<header>
+					<h3>Form</h3>
+				</header>
+				<form method="post" action="#">
+					<div class="row">
+						<div class="6u 12u(mobilep)">
+							<label for="name">Name</label>
+							<input class="text" type="text" name="name" id="name" value="" placeholder="John Doe" />
+						</div>
+						<div class="6u 12u(mobilep)">
+							<label for="email">Email</label>
+							<input class="text" type="text" name="email" id="email" value="" placeholder="johndoe@domain.tld" />
+						</div>
+					</div>
+					<div class="row">
+						<div class="12u">
+							<label for="subject">Subject</label>
+							<input class="text" type="text" name="subject" id="subject" value="" placeholder="Enter your subject" />
+						</div>
+					</div>
+					<div class="row">
+						<div class="12u">
+							<label for="subject">Message</label>
+							<textarea name="message" id="message" placeholder="Enter your message" rows="6"></textarea>
+						</div>
+					</div>
+					<div class="row">
+						<div class="12u">
+							<ul class="actions">
+								<li><input type="submit" value="Send" /></li>
+								<li><input type="reset" value="Reset" class="alt" /></li>
+							</ul>
+						</div>
+					</div>
+				</form>
+			</section> -->
+
+			<!-- <header>
+				<h2>A lot of generic stuff</h2>
+			</header> -->
+			<!-- <section>
+				<header>
+					<h3>Blockquote</h3>
+				</header>
+				<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget.
+				tempus euismod. Vestibulum ante ipsum primis in faucibus.</blockquote>
+			</section> -->
+			<!--
+			<p>Tellus erat mauris ipsum fermentum<br />
+			etiam vivamus nunc nibh morbi.</p>
+			-->
