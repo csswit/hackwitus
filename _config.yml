@@ -47,7 +47,7 @@ event:
       - text: "Apply"
         my_mlh:
           client_id:    "b85972f8aa004c09989c02f10a874c51963e501106a36a676847b8490f34e226"
-          redirect_uri: "https://hackwitus.typeform.com/to/wNQZmB"
+          redirect_uri: "https://www.eventbrite.com/e/hackwitus-tickets-31398465656?aff=eac2"
       - text: "Interested in sponsoring us?"
         href: "mailto:sponsorship@hackwit.us"
 
