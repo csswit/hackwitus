@@ -35,7 +35,7 @@ event:
   date:        "25 & 26 March 2017"
   location:    "Ira Allen Building, 540 Parker St, Boston MA 02120"
   #set this to true when schedule is ready
-  schedule_ready: false
+  schedule_ready: true
 
   # trust_badge:
   #   year:   "2017"  # season year
@@ -60,44 +60,54 @@ event:
   schedule:
     - title: "Saturday, March 25th 2017"
       events:
-        - time: "9AM"
-          activity: "lorem ipsum"
-        - time: "9AM"
-          activity: "lorem ipsum"
-        - time: "9AM"
-          activity: "lorem ipsum"
-        - time: "9AM"
-          activity: "lorem ipsum"
+        - time: "9 AM"
+          activity: "Open Registration"
+        - time: "10 AM"
+          activity: "Opening Ceremony"
+        - time: "12 PM"
+          activity: "Hacking Begin"
+        - time: "1 PM"
+          activity: "Lunch"
+        - time: "7 PM"
+          activity: "Dinner"
     - title: "Sunday, March 26th 2017"
       events:
-        - time: "9AM"
-          activity: "lorem ipsum"
-        - time: "9AM"
-          activity: "lorem ipsum"
-        - time: "9AM"
-          activity: "lorem ipsum"
-        - time: "9AM"
-          activity: "lorem ipsum"
+        - time: "12 AM"
+          activity: "Midnight Snack"
+        - time: "7 AM"
+          activity: "Breakfast"
+        - time: "12 PM"
+          activity: "Hacking End"
+        - time: "1 PM"
+          activity: "Lunch"
+        - time: "2 PM"
+          activity: "Demo"
+        - time: "3 PM"
+          activity: "Closing Ceremony"
 
   # Info Sections
   info:
     sections:
       - image: "images/pic01.jpg"
+        icon: "fa-code"
         title: "WHAT IS A HACKATHON?"
         isRight: true
         description: >
           A hackathon is an invention marathon. Students come together to build cool software & hardware hacks over 24-48 hours. It's [very beginner friendly](https://medium.com/@tfogo/hackathons-are-for-beginners-77a9c9c0e000#.cj21niskl).
       - image: "images/pic02.jpg"
+        icon: "fa-users"
         title: "WHO CAN ATTEND?"
         isRight: false
         description: >
           Any students who are currently enrolled at a college/university or have graduated within the past 12 months are eligible to attend. Plus, it's free!
       - image: "images/pic03.jpg"
+        icon: "fa-question"
         title: "WHAT SHOULD I BRING?"
         isRight: true
         description: >
           Bring anything you'll need to stay overnight, as well as any technology you plan on using. We'll provide some stuff, but you can still bring your own!
       - image: "images/pic04.jpg"
+        icon: "fa-map-marker"
         title: "WHERE/WHEN IS IT?"
         isRight: false
         description: >
@@ -131,6 +141,38 @@ event:
     - question: "Will there be travel reimbursements?"
       answer: >
         We cannot offer travel reimbursements at this time.
+
+  #Sponsor Section
+  sponsor:
+    platinum:
+      title: "Platinum Sponsors"
+      sponsors:
+        - title:
+          logo:
+          description:
+        - title:
+          logo:
+          description:
+        - title:
+          logo:
+          description:
+    gold:
+      title: "Gold Sponsors"
+      sponsors:
+        - title:
+          logo:
+        - title:
+          logo:
+    silver:
+      title:
+      sponsors:
+        - title:
+          logo:
+    bronze:
+      title:
+      sponsors:
+        - title:
+          logo:
 
   # This is the message you'll receive once you've registered.
   register:

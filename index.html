@@ -15,12 +15,12 @@ layout: default
 		      {% for section in site.event.info.sections %}
 						{% if section.isRight %}
 							<section class="feature left">
-								<a href="#" class="wow bounceInLeft image icon fa-signal"><img src="{{section.image}}" alt="" /></a>
+								<a href="#" class="wow bounceInLeft image icon {{section.icon}}"><img src="{{section.image}}" alt="" /></a>
 								<div class="content wow bounceInRight">
 						{% else %}
 							<section class="feature right">
 								<!-- icon fa-code -->
-								<a href="#" class="image wow bounceInRight"><img src="{{section.image}}" alt="" /></a>
+								<a href="#" class="image icon wow bounceInRight {{section.icon}}"><img src="{{section.image}}" alt="" /></a>
 								<div class="content wow bounceInLeft">
 						{% endif %}
 									<h3>{{section.title}}</h3>
@@ -36,7 +36,7 @@ layout: default
 							<header class="wow bounceInDown">
 								<h2>Schedule</h2>
 							</header>
-							{% if event.schedule_ready %}
+							{% if site.event.schedule_ready %}
 								{% for day in site.event.schedule%}
 									<header class="wow fadeInDown">
 										<h3>{{day.title}}</h3>
@@ -54,7 +54,7 @@ layout: default
 													<tr>
 														<td>{{event.time}}</td>
 														<td>{{event.activity}}</td>
-													<tr>
+													</tr>
 												{% endfor %}
 											</tbody>
 										</table>
