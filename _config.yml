@@ -144,6 +144,9 @@ event:
 
   #Sponsor Section
   sponsor:
+    affiliate:
+      title:
+      affiliates:
     platinum:
       title: "Platinum Sponsors"
       sponsors:
