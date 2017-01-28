@@ -1823,7 +1823,7 @@
 		-webkit-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
 		-ms-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
 		transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
-		border-bottom: dotted 1px;
+		/*border-bottom: dotted 1px;*/
 		color: #4eb980;
 		text-decoration: none;
 	}
@@ -1897,6 +1897,7 @@
 
 	section.special, article.special {
 		text-align: center;
+		margin-top: 50px;
 	}
 
 	header {
@@ -2510,11 +2511,12 @@
 
 	#header {
 		background-attachment: scroll,							scroll,					fixed;
-		background-image: url("images/top-3200.svg"), url("images/overlay.png"), url("../../images/header.jpg");
+		background-image: url("images/top-3200.svg");
+		background-color: white;
 		background-position: bottom center,					top left,				center center;
 		background-repeat: repeat-x,						repeat,					no-repeat;
 		background-size: 3200px 460px,					auto,					cover;
-		color: rgba(255, 255, 255, 0.8);
+		color: #96043c;
 		padding: 10em 0 20em 0;
 		position: relative;
 		text-align: center;
@@ -2541,7 +2543,7 @@
 		}
 
 		#header a {
-			border-bottom-color: rgba(255, 255, 255, 0.35);
+			border-bottom-color: #96043c;
 			color: orange;
 		}
 
@@ -2551,21 +2553,19 @@
 			}
 
 		#header strong, #header b {
-			color: #ffffff;
+			color: #96043c;
 		}
 
 		#header h1, #header h2, #header h3, #header h4, #header h5, #header h6 {
-			color: #ffffff;
-			font-size: 1.5em;
-			text-align: left !important;
+			color: black;
 		}
 
 		#header input[type="submit"],
 		#header input[type="reset"],
 		#header input[type="button"],
 		#header .button {
-			background: #ffffff;
-			color: #544d55;
+			background: orange;
+			color: #fff;
 		}
 
 		#header .logo {
@@ -2863,7 +2863,7 @@
 
 			#header {
 				background-attachment: scroll,							scroll,							scroll;
-				background-image: url("images/top-1600.svg"), url("images/overlay.png"), url("../../images/header.jpg");
+				background-image: url("images/top-1600.svg");
 				background-size: 1600px 230px,					auto,							cover;
 				padding: 6em 0 12em 0;
 			}
@@ -3030,7 +3030,7 @@
 		/* Header */
 
 			#header {
-				background-image: url("images/top-1280.svg"), url("images/overlay.png"), url("../../images/header.jpg");
+				background-image: url("images/top-1280.svg");
 				background-size: 1280px 184px,						auto,							cover;
 				padding: 3em 0 7em 0;
 			}
@@ -3180,4 +3180,15 @@
 	}
 	.visible{
 		opacity: 1;
+	}
+
+	.logo{
+		max-width: 100%;
+		max-height: 100%;
+		margin-top: 20px;
+		margin-bottom: 50px;
+	}
+	#scroll{
+		width: 5%;
+		height: 5%;
 	}

@@ -45,14 +45,33 @@
 				);
 			});
 			$("#welcome-text").typed({
-            strings: ["hello.(\"World\");^2000","new WIT(\"Hackathon\");^2000","date = \"March 25-26 2017\";^2000","location = <a href=\"https://goo.gl/maps/qYL4bxWrB5x\">WIT.IraAllen</a>;^2000","hype.isJoined ?"],
+            strings: ["hello.(\"World\");^2000","new WIT(\"Hackathon\");^2000","date = \"March 25-26 2017\";^2000","location = <a href=\"https://goo.gl/maps/qYL4bxWrB5x\">WIT.IraAllen</a>;^2000","hype.isJoined ? <a href=\"https://www.eventbrite.com/e/hackwitus-tickets-31398465656?aff=eac2\">\"Apply\"</a>^1000;"],
             typeSpeed: 50,
 						cursorChar: "_",
 						loop:false,
-						callback: () => {
-							$(".quick-fact").show();
-						}
         });
+				// Add smooth scrolling to all links
+	   $("a").on('click', function(event) {
+
+	     // Make sure this.hash has a value before overriding default behavior
+	     if (this.hash !== "") {
+	       // Prevent default anchor click behavior
+	       event.preventDefault();
+
+	       // Store hash
+	       var hash = this.hash;
+
+	       // Using jQuery's animate() method to add smooth page scroll
+	       // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+	       $('html, body').animate({
+	         scrollTop: $(hash).offset().top
+	       }, 800, function(){
+
+	         // Add hash (#) to URL when done scrolling (default click behavior)
+	         window.location.hash = hash;
+	       });
+	     } // End if
+	   });
 	});
 
 })(jQuery);

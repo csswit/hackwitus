@@ -5,10 +5,36 @@ layout: default
 {% include hero.html %}
 		<!-- Main -->
 			<div id="main">
+				<div class="box containter">
+					<header>
+						<h2 class="major wow bounceInDown">/* Quick Info */</h2>
+					</header>
+					<div class="row">
+						<div class="col-lg-3 wow bounceInLeft">
+							<h3>//What?</h3>
+							<p rel="description"><b>{{ site.event.description }}</b></p>
+						</div>
+						<div class="col-lg-3 wow bounceInLeft">
+							<h3>//Where?</h3>
+							<p rel="location"><b>{{site.event.location}}</b></p>
+						</div>
+						<div class="col-lg-3 wow bounceInRight">
+							<h3>//When?</h3>
+							<p rel="date"><b>{{site.event.date}}</b></p>
+						</div>
+						<div class="col-lg-3 wow bounceInRight">
+							<h3>//Interested?</h3>
+							<p><b>{% for link in site.event.hero.links %}
+								{% if link.my_mlh %}
+									<a class="apply button" href="{{link.my_mlh.redirect_uri}}">{{ link.text }}</a>
+								{% endif %}
+							{% endfor %}</b></p>
+						</div>
+					</div>
+				</div>
 
-				<header class="major container 75% wow bounceInRight">
+				<header class="major container 75% wow bounceInDown">
 					<h2>{{ site.event.about.description }}</h2>
-
 				</header>
 
 				<div class="box alt container">
@@ -31,29 +57,28 @@ layout: default
 				</div>
 
 				<div class="box container">
-
 					<section>
 							<header class="wow bounceInDown">
 								<h2>Schedule</h2>
 							</header>
 							{% if site.event.schedule_ready %}
 								{% for day in site.event.schedule%}
-									<header class="wow fadeInDown">
+									<header class="wow bounceInDown">
 										<h3>{{day.title}}</h3>
 									</header>
 									<div class="table-wrapper">
-										<table class="default wow fadeIn">
+										<table class="default">
 											<thead>
 												<tr>
-													<th>Time</th>
-													<th>Activities</th>
+													<th class="wow bounceInDown">Time</th>
+													<th class="wow bounceInDown">Activities</th>
 												</tr>
 											</thead>
 											<tbody>
 												{% for event in day.events %}
 													<tr>
-														<td>{{event.time}}</td>
-														<td>{{event.activity}}</td>
+														<td class="wow bounceInDown">{{event.time}}</td>
+														<td class="wow bounceInDown">{{event.activity}}</td>
 													</tr>
 												{% endfor %}
 											</tbody>
@@ -64,34 +89,84 @@ layout: default
 								<center><p>TBD</p><center>
 							{% endif %}
 					</section>
-					<section>
-						<header class="wow fadeInDown">
-							<h2>Sponsor</h2>
-							<p>We are proud to have these sponsors</p>
+					<section class="special">
+						<header class="wow bounceInDown">
+							<h2>Sponsors/Affiliates</h2>
 						</header>
+						<section>
+							<center>
+								<h3 class="wow bounceInDown">{{site.event.sponsor.platinum.title}}</h3>
+								<div class="row container-fluid">
+									{% for sponsor in site.event.sponsor.platinum.sponsors %}
+											<div class="col-sm-12">
+												<img class="image logo wow wow bounceInDown" src="{{sponsor.logo}}"/>
+											</div>
+									{% endfor %}
+								</div>
+							</center>
+							<center>
+								<h3 class="wow bounceInDown">{{site.event.sponsor.gold.title}}</h3>
+								<div class="row container-fluid">
+									{% for sponsor in site.event.sponsor.gold.sponsors %}
+											<div class="col-sm-6">
+												<img class="image logo wow fadeInDown" src="{{sponsor.logo}}"/>
+											</div>
+									{% endfor %}
+								</div>
+							</center>
+							<center>
+								<h3 class="wow bounceInDown">{{site.event.sponsor.silver.title}}</h3>
+								<div class="row container-fluid">
+									{% for sponsor in site.event.sponsor.silver.sponsors %}
+											<div class="col-sm-4">
+												<img class="image logo wow fadeInDown" src="{{sponsor.logo}}"/>
+											</div>
+									{% endfor %}
+								</div>
+							</center>
+							<center>
+								<h3 class="wow bounceInDown">{{site.event.sponsor.bronze.title}}</h3>
+								<div class="row container-fluid">
+									{% for sponsor in site.event.sponsor.bronze.sponsors %}
+											<div class="col-sm-3">
+												<img class="image logo wow fadeInDown" src="{{sponsor.logo}}"/>
+											</div>
+									{% endfor %}
+								</div>
+							</center>
+							<center>
+								<h3 class="wow bounceInDown">{{site.event.sponsor.affiliate.title}}</h3>
+								<div class="row container-fluid">
+									{% for affiliate in site.event.sponsor.affiliate.affiliates %}
+											<div class="col-sm-6">
+												<img class="image logo wow fadeInDown" src="{{affiliate.logo}}" />
+											</div>
+									{% endfor %}
+								</div>
+							</center>
+						</section>
 						<center>
-							<p>{% for link in site.event.hero.links %}
+							{% for link in site.event.hero.links %}
 			          {% if link.href %}
 			            <a class="button" href="{{ link.href }}">{{ link.text }}</a>
 			          {% endif %}
-			        {% endfor %}</p>
+			        {% endfor %}
 						</center>
 					</section>
-
-					<section>
-						<header class="wow fadeInDown">
+					<section class="special">
+						<header class="wow bounceInDown">
 							<h2>FAQ</h2>
 						</header>
 						{% for item in site.event.faq %}
-							<center>
+							<center class="wow bounceInDown" >
 								<h5>{{ item.question }}</h5>
-								<p>{{ item.answer | markdownify }}</p>
+								<p >{{ item.answer | markdownify }}</p>
 							</center>
 						{% endfor %}
 					</section>
 				</div>
 
-				<footer class="major container 75%  wow fadeIn">
+				<footer class="major container 75%  wow bounceIn">
 					<h3>What are you waiting for?</h3>
 					<ul class="actions">
 						<li>{% for link in site.event.hero.links %}
@@ -108,11 +183,11 @@ layout: default
 			<div id="footer">
 				<div class="container 75%">
 
-					<header class="major last">
+					<header class="major last wow bounceInDown">
 						<h2>Questions or comments?</h2>
 					</header>
 
-					<form method="post" action="https://formspree.io/contact@hackwit.us">
+					<form class="wow bounceInDown" method="post" action="https://formspree.io/contact@hackwit.us">
 						<div class="row">
 							<div class="6u 12u(mobilep)">
 								<input type="text" name="name" placeholder="Name" />
@@ -136,11 +211,10 @@ layout: default
 					</form>
 
 					<ul class="icons">
-						<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-						<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-						<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
-						<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
+						<li><a href="https://twitter.com/hackwitus" class="icon fa-twitter wow bounceInLeft"><span class="label">Twitter</span></a></li>
+						<li><a href="https://www.facebook.com/events/168910336929881/" class="icon fa-facebook wow bounceInLeft"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon fa-instagram wow bounceInRight"><span class="label">Instagram</span></a></li>
+						<li><a href="#" class="icon fa-github wow bounceInRight"><span class="label">Github</span></a></li>
 					</ul>
 
 				</div>

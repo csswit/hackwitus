@@ -20,7 +20,7 @@ tracking:
 
 # Let people connect & engage with you through social media.
 social:
-  twitter_handle: "HackWITus"
+  twitter_handle: "Hackwitus"
 
 # This is Search Engine Optimization. It'll help your website look better on search.
 seo:
@@ -145,17 +145,20 @@ event:
   #Sponsor Section
   sponsor:
     affiliate:
-      title:
+      title: "Affiliates"
+      description:
       affiliates:
+        - title: "Wentworth Institute of Technology"
+          logo: "images/sponsor_affiliates/wentworth.png"
+        - title: "Wentworth Computer Science Society"
+          logo: "images/sponsor_affiliates/wentworthcss.png"
+        - title: "Association for Computing Machinery"
+          logo: "images/sponsor_affiliates/acm.png"
+        - title: "Major League Hacking"
+          logo: "images/sponsor_affiliates/mlh.png"
     platinum:
       title: "Platinum Sponsors"
       sponsors:
-        - title:
-          logo:
-          description:
-        - title:
-          logo:
-          description:
         - title:
           logo:
           description:
@@ -167,12 +170,12 @@ event:
         - title:
           logo:
     silver:
-      title:
+      title: "Silver Sponsors"
       sponsors:
         - title:
           logo:
     bronze:
-      title:
+      title: "Bronze Sponsors"
       sponsors:
         - title:
           logo:
