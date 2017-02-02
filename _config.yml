@@ -172,8 +172,8 @@ event:
     silver:
       title: "Silver Sponsors"
       sponsors:
-        - title:
-          logo:
+        - title: Douglas D. Schumann Library and Learning Commons
+          logo: images/sponsor_affiliates/library.png
     bronze:
       title: "Bronze Sponsors"
       sponsors:

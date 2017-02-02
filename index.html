@@ -95,6 +95,16 @@ layout: default
 						</header>
 						<section>
 							<center>
+								<h3 class="wow bounceInDown">{{site.event.sponsor.affiliate.title}}</h3>
+								<div class="row container-fluid">
+									{% for affiliate in site.event.sponsor.affiliate.affiliates %}
+											<div class="col-sm-6">
+												<img class="image logo wow fadeInDown" src="{{affiliate.logo}}" />
+											</div>
+									{% endfor %}
+								</div>
+							</center>
+							<center>
 								<h3 class="wow bounceInDown">{{site.event.sponsor.platinum.title}}</h3>
 								<div class="row container-fluid">
 									{% for sponsor in site.event.sponsor.platinum.sponsors %}
@@ -130,16 +140,6 @@ layout: default
 									{% for sponsor in site.event.sponsor.bronze.sponsors %}
 											<div class="col-sm-3">
 												<img class="image logo wow fadeInDown" src="{{sponsor.logo}}"/>
-											</div>
-									{% endfor %}
-								</div>
-							</center>
-							<center>
-								<h3 class="wow bounceInDown">{{site.event.sponsor.affiliate.title}}</h3>
-								<div class="row container-fluid">
-									{% for affiliate in site.event.sponsor.affiliate.affiliates %}
-											<div class="col-sm-6">
-												<img class="image logo wow fadeInDown" src="{{affiliate.logo}}" />
 											</div>
 									{% endfor %}
 								</div>
