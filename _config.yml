@@ -172,6 +172,8 @@ event:
     silver:
       title: "Silver Sponsors"
       sponsors:
+        - title: Wentworth Leadership Institute
+          logo: images/sponsor_affiliates/leadership_institute.png
         - title: Douglas D. Schumann Library and Learning Commons
           logo: images/sponsor_affiliates/library.png
     bronze:
