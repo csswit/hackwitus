@@ -165,10 +165,10 @@ event:
     gold:
       title: "Gold Sponsors"
       sponsors:
-        - title:
-          logo:
-        - title:
-          logo:
+        - title: IEEE
+          logo: images/sponsor_affiliates/ieee.png
+        - title: CVGC
+          logo: images/sponsor_affiliates/cvgc.png
     silver:
       title: "Silver Sponsors"
       sponsors:
@@ -176,6 +176,8 @@ event:
           logo: images/sponsor_affiliates/leadership_institute.png
         - title: Douglas D. Schumann Library and Learning Commons
           logo: images/sponsor_affiliates/library.png
+        - title: 4 Purpose Energy Drink
+          logo: images/sponsor_affiliates/energy.jpg
     bronze:
       title: "Bronze Sponsors"
       sponsors:
