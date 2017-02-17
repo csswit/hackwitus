@@ -176,8 +176,8 @@ event:
           logo: images/sponsor_affiliates/leadership_institute.png
         - title: Douglas D. Schumann Library and Learning Commons
           logo: images/sponsor_affiliates/library.png
-        - title: 4 Purpose Energy Drink
-          logo: images/sponsor_affiliates/energy.jpg
+        # - title: 4 Purpose Energy Drink
+        #   logo: images/sponsor_affiliates/energy.jpg
     bronze:
       title: "Bronze Sponsors"
       sponsors:
