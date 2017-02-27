@@ -172,17 +172,25 @@ event:
     silver:
       title: "Silver Sponsors"
       sponsors:
-        - title: Wentworth Leadership Institute
-          logo: images/sponsor_affiliates/leadership_institute.png
         - title: Douglas D. Schumann Library and Learning Commons
           logo: images/sponsor_affiliates/library.png
-        # - title: 4 Purpose Energy Drink
-        #   logo: images/sponsor_affiliates/energy.jpg
+        - title: Technovation
+          logo: images/sponsor_affiliates/technovation.png
+        - title: Wentworth Leadership Institute
+          logo: images/sponsor_affiliates/leadership_institute.png
+        - title: 4 Purpose Energy Drink
+          logo: images/sponsor_affiliates/energy.jpg
+        - title: Facebook
+          logo: images/sponsor_affiliates/facebook.png
+        - title: goPuff
+          logo: images/sponsor_affiliates/gopuff.jpg
     bronze:
       title: "Bronze Sponsors"
       sponsors:
-        - title:
-          logo:
+        - title: EDX
+          logo: images/sponsor_affiliates/edx.png
+        - title: Microsoft Student Partner Program
+          logo: images/sponsor_affiliates/microsoft.png
 
   # This is the message you'll receive once you've registered.
   register:
