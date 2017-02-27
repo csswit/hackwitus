@@ -169,6 +169,8 @@ event:
           logo: images/sponsor_affiliates/ieee.png
         - title: CVGC
           logo: images/sponsor_affiliates/cvgc.png
+        - title: Accelerate
+          logo: images/sponsor_affiliates/accelerate.png
     silver:
       title: "Silver Sponsors"
       sponsors:
@@ -189,8 +191,12 @@ event:
       sponsors:
         - title: EDX
           logo: images/sponsor_affiliates/edx.png
+        - title: Redbull
+          logo: images/sponsor_affiliates/redbull.png
         - title: Microsoft Student Partner Program
           logo: images/sponsor_affiliates/microsoft.png
+        - title: National Society of Black Engineer
+          logo: images/sponsor_affiliates/nsbe.png
 
   # This is the message you'll receive once you've registered.
   register:
