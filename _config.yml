@@ -131,10 +131,6 @@ event:
     - question: "What will be provided for participants?"
       answer: >
         Food and snacks will be provided, as well as some educational, technical, and hardware resources. However, you are welcome to bring or purchase your own! We also recommend that you bring anything you may need to more comfortably stay overnight.
-    # - question: "What is Major League Hacking?"
-    #   answer: >
-    #     Major League Hacking is [the official student hackathon league](https://mlh.io) in North America & Europe.
-    #     We work with over 200 Member Events and empower over 70,000 students every year.
     - question: "What if there is a change of plans or emergency?"
       answer: >
         For a change of plans, we will send an email to the email address that you give us when you sign up. You are also welcome to give us a safety contact so that in the event of an emergency we can get in touch with that individual.
@@ -168,9 +164,13 @@ event:
         - title: IEEE
           logo: images/sponsor_affiliates/ieee.png
         - title: CVGC
-          logo: images/sponsor_affiliates/cvgc.png
+          lobbgo: images/sponsor_affiliates/cvgc.png
         - title: Accelerate
           logo: images/sponsor_affiliates/accelerate.png
+        - title: National Society of Black Engineer
+          logo: images/sponsor_affiliates/nsbe.png
+        - title: Wentworth Student Government
+          logo: images/sponsor_affiliates/wsg.png
     silver:
       title: "Silver Sponsors"
       sponsors:
@@ -180,10 +180,14 @@ event:
           logo: images/sponsor_affiliates/technovation.png
         - title: Wentworth Leadership Institute
           logo: images/sponsor_affiliates/leadership_institute.png
+        - title: HealthcareSource
+          logo: images/sponsor_affiliates/hcs_logo.png
         - title: 4 Purpose Energy Drink
           logo: images/sponsor_affiliates/energy.jpg
         - title: Facebook
           logo: images/sponsor_affiliates/facebook.png
+        - title: test
+          logo:
         - title: goPuff
           logo: images/sponsor_affiliates/gopuff.jpg
     bronze:
@@ -195,8 +199,7 @@ event:
           logo: images/sponsor_affiliates/redbull.png
         - title: Microsoft Student Partner Program
           logo: images/sponsor_affiliates/microsoft.png
-        - title: National Society of Black Engineer
-          logo: images/sponsor_affiliates/nsbe.png
+
 
   # This is the message you'll receive once you've registered.
   register:
