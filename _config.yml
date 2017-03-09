@@ -145,12 +145,16 @@ event:
       description:
       affiliates:
         - title: "Wentworth Institute of Technology"
+          link: "https://www.wit.edu/"
           logo: "images/sponsor_affiliates/wentworth.png"
         - title: "Wentworth Computer Science Society"
+          link: "https://www.wentworthcss.club/"
           logo: "images/sponsor_affiliates/wentworthcss.png"
         - title: "Association for Computing Machinery"
+          link: "https://www.acm.org/"
           logo: "images/sponsor_affiliates/acm.png"
         - title: "Major League Hacking"
+          link: "https://www.mlh.io"
           logo: "images/sponsor_affiliates/mlh.png"
     platinum:
       title: "Platinum Sponsors"
@@ -161,45 +165,67 @@ event:
     gold:
       title: "Gold Sponsors"
       sponsors:
-        - title: IEEE
-          logo: images/sponsor_affiliates/ieee.png
-        - title: CVGC
-          lobbgo: images/sponsor_affiliates/cvgc.png
-        - title: Accelerate
-          logo: images/sponsor_affiliates/accelerate.png
-        - title: National Society of Black Engineer
-          logo: images/sponsor_affiliates/nsbe.png
-        - title: Wentworth Student Government
-          logo: images/sponsor_affiliates/wsg.png
+        - title: "IEEE"
+          link: "https://www.ieee.org/"
+          logo: "images/sponsor_affiliates/ieee.png"
+        - title: "CVGC"
+          link: "http://wit.orgsync.com/org/cvgc"
+          logo: "images/sponsor_affiliates/cvgc.png"
+        - title: "Accelerate"
+          link: "http://blogs.wit.edu/accelerate/"
+          logo: "images/sponsor_affiliates/accelerate.png"
+        - title: "National Society of Black Engineer"
+          link: "https://www.nsbe.org"
+          logo: "images/sponsor_affiliates/nsbe.png"
+        - title: "Wentworth Student Government"
+          link: "http://blogs.wit.edu/wsg2/"
+          logo: "images/sponsor_affiliates/wsg.png"
+        - title: "I-Automation"
+          link: "http://www.i-automation.com/"
+          logo: "images/sponsor_affiliates/ia.png"
     silver:
       title: "Silver Sponsors"
       sponsors:
-        - title: Douglas D. Schumann Library and Learning Commons
-          logo: images/sponsor_affiliates/library.png
+        - title: "Douglas D. Schumann Library and Learning Commons"
+          link: "https://www.library.wit.edu"
+          logo: "images/sponsor_affiliates/library.png"
         - title: Technovation
-          logo: images/sponsor_affiliates/technovation.png
-        - title: Wentworth Leadership Institute
-          logo: images/sponsor_affiliates/leadership_institute.png
-        - title: HealthcareSource
-          logo: images/sponsor_affiliates/hcs_logo.png
-        - title: 4 Purpose Energy Drink
-          logo: images/sponsor_affiliates/energy.jpg
-        - title: Facebook
-          logo: images/sponsor_affiliates/facebook.png
-        - title: test
-          logo:
-        - title: goPuff
-          logo: images/sponsor_affiliates/gopuff.jpg
+          link: "https://www.technovationchallenge.org/"
+          logo: "images/sponsor_affiliates/technovation.png"
+        - title: "Wentworth Leadership Institute"
+          link: "https://www.wit.edu/student-life/student-affairs/center-student-engagement/about-leadership-education-wentworth"
+          logo: "images/sponsor_affiliates/leadership_institute.png"
+        - title: "HealthcareSource"
+          link: "http://www.healthcaresource.com/"
+          logo: "images/sponsor_affiliates/hcs_logo.png"
+        - title: "Facebook"
+          link: "https://www.facebook.com/"
+          logo: "images/sponsor_affiliates/facebook.png"
+        - title: "4 Purpose Energy Drink"
+          link: "https://www.4purposeenergy.com/"
+          logo: "images/sponsor_affiliates/energy.jpg"
+        - title: ""
+          link: ""
+          logo: ""
+        - title: "EDX"
+          link: "https://www.edx.org/"
+          logo: "images/sponsor_affiliates/edx.PNG"
+
     bronze:
       title: "Bronze Sponsors"
       sponsors:
-        - title: EDX
-          logo: images/sponsor_affiliates/edx.PNG
-        - title: Redbull
-          logo: images/sponsor_affiliates/redbull.png
-        - title: Microsoft Student Partner Program
-          logo: images/sponsor_affiliates/microsoft.png
-
+        - title: "Redbull"
+          link: "https://www.redbull.com/us-en/"
+          logo: "images/sponsor_affiliates/redbull.png"
+        - title: "Microsoft Student Partner Program"
+          link: "https://msdn.microsoft.com/en-us/microsoftstudentpartners.aspx"
+          logo: "images/sponsor_affiliates/microsoft.png"
+        - title: "MakeSchool"
+          link: "https://www.makeschool.com/"
+          logo: "images/sponsor_affiliates/Makeschool.png"
+        - title: "goPuff"
+          link: "https://gopuff.com/"
+          logo: "images/sponsor_affiliates/gopuff.png"
 
   # This is the message you'll receive once you've registered.
   register:

@@ -94,56 +94,46 @@ layout: default
 							<h2>Sponsors/Affiliates</h2>
 						</header>
 						<section>
-							<center>
 								<!-- <h3 class="wow bounceInDown">{{site.event.sponsor.affiliate.title}}</h3> -->
-								<div class="row container-fluid">
+								<div class="row container">
 									{% for affiliate in site.event.sponsor.affiliate.affiliates %}
-											<div class="col-xs-6">
-												<img class="image logo wow fadeInDown" src="{{affiliate.logo}}" />
+											<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+												<a href="{{sponsor.link}}"><img class="image logo wow fadeInDown" src="{{affiliate.logo}}" /></a>
 											</div>
 									{% endfor %}
 								</div>
-							</center>
-							<center>
 								<!-- <h3 class="wow bounceInDown">{{site.event.sponsor.platinum.title}}</h3> -->
-								<div class="row container-fluid">
+								<div class="row container">
 									{% for sponsor in site.event.sponsor.platinum.sponsors %}
 											<div class="col-xs-12">
-												<img class="image logo wow wow bounceInDown" src="{{sponsor.logo}}"/>
+												<a href="{{sponsor.link}}"><img class="image logo wow wow bounceInDown" src="{{sponsor.logo}}"/></a>
 											</div>
 									{% endfor %}
 								</div>
-							</center>
-							<center>
 								<!-- <h3 class="wow bounceInDown">{{site.event.sponsor.gold.title}}</h3> -->
-								<div class="row container-fluid">
+								<div class="row container">
 									{% for sponsor in site.event.sponsor.gold.sponsors %}
-											<div class="col-xs-6">
-												<img class="image logo wow fadeInDown" src="{{sponsor.logo}}"/>
+											<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+												<a href="{{sponsor.link}}"><img class="image logo wow fadeInDown" src="{{sponsor.logo}}"/></a>
 											</div>
 									{% endfor %}
 								</div>
-							</center>
-							<center>
 								<!-- <h3 class="wow bounceInDown">{{site.event.sponsor.silver.title}}</h3> -->
-								<div class="row container-fluid">
+								<div class="row container">
 									{% for sponsor in site.event.sponsor.silver.sponsors %}
-											<div class="col-xs-4">
-												<img class="image logo wow fadeInDown" src="{{sponsor.logo}}"/>
+											<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+												<a href="{{sponsor.link}}"><img class="image logo wow fadeInDown" src="{{sponsor.logo}}"/></a>
 											</div>
 									{% endfor %}
 								</div>
-							</center>
-							<center>
 								<!-- <h3 class="wow bounceInDown">{{site.event.sponsor.bronze.title}}</h3> -->
-								<div class="row container-fluid">
+								<div class="row container">
 									{% for sponsor in site.event.sponsor.bronze.sponsors %}
 											<div class="col-xs-3">
-												<img class="image logo wow fadeInDown" src="{{sponsor.logo}}"/>
+												<a href="{{sponsor.link}}"><img class="image logo wow fadeInDown" src="{{sponsor.logo}}"/></a>
 											</div>
 									{% endfor %}
 								</div>
-							</center>
 						</section>
 						<center>
 							{% for link in site.event.hero.links %}
