@@ -138,6 +138,59 @@ event:
       answer: >
         We cannot offer travel reimbursements at this time.
 
+  #Organizers
+  organizers:
+      heads:
+        - name: "Dat Do"
+          position: "Head of organizers"
+          email: "dat@hackwit.us"
+          picture: ""
+        - name: "An Huynh"
+          position: "Head of finance"
+          email: "an@hackwit.us"
+          picture: ""
+        - name: "Ethan Arrowood"
+          position: "Head of marketing"
+          email: "an@hackwit.us"
+          picture: ""
+        - name: "Bethy Diakabana"
+          position: "Head of hacker experience"
+          email: "an@hackwit.us"
+          picture: ""
+      team:
+        - name: "Vlad Doster"
+          position: "Organizer"
+          email: "vlad@hackwit.us"
+          picture: ""
+        - name: "Chris Thireauf"
+          position: "Organizer"
+          email: "christopher@hackwit.us"
+          picture: ""
+        - name: "Chris Joanis"
+          position: "Organizer"
+          email: "chris@hackwit.us"
+          picture: ""
+        - name: "Anna Khachaturova"
+          position: "Organizer"
+          email: "anna@hackwit.us"
+          picture: ""
+        - name: "James Coyne"
+          position: "Organizer"
+          email: "james@hackwit.us"
+          picture: ""
+        - name: "Shawn Toubeau"
+          position: "Organizer"
+          email: "shawn@hackwit.us"
+          picture: ""
+        - name: "Stephen Froese"
+          position: "Organizer"
+          email: "stephen@hackwit.us"
+          picture: ""
+        - name: "Helene Casanova"
+          position: "Organizer"
+          email: "helene@hackwit.us"
+          picture: ""
+
   #Sponsor Section
   sponsor:
     affiliate:
