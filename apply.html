@@ -14,7 +14,7 @@
 </head>
 
 <body>
-  <form>
+  <form id="applicationForm">
     <h1 id="header">HackWITus Registration</h1>
     <div class="input">
       <i class="fa fa-user"> </i>
@@ -47,11 +47,11 @@
     <div class="resumeInput">
       <p>Resume
         <div style="display: flex; justify-content: center;">
-          <p>URL:</p> <input type="url" name="resumeLink" />
+          <p>URL:</p> <input type="url" name="resumeLink" id="resumeLink" />
         </div>
         or
-        <div style="display: flex; justify-content: center; margin-left: 12.12%;">
-          <p style="min-width: 105px;">Upload Resume:</p> <input type="file" name="resumeUpload" />
+        <div style="display: flex; justify-content: center; margin-left: 12.12%;" id="fileUpload">
+          <p style="min-width: 105px;">Upload Resume:</p> <input type="file" name="resumeUpload" id="resumeFile"/>
         </div>
       </p>
     </div>
