@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>HackWITus Registration</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="style/apply.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slider-pro/1.3.0/css/slider-pro.min.css" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+</head>
+
+<body>
+  <form>
+    <h1 id="header">HackWITus Registration</h1>
+    <div class="input">
+      <i class="fa fa-user"> </i>
+      <input type="text" name="name" placeholder="Name" required />
+      <p class="required">*</p>
+    </div>
+
+    <div class="input">
+      <i class="fa fa-envelope"> </i>
+      <input type="email" name="email" placeholder="Email" required>
+      <p class="required">*</p>
+    </div>
+
+    <div class="compressedInput input">
+      <i class="fa fa-phone"> </i>
+      <input type="tel" name="phoneNumber" placeholder="123-456-7890" required>
+      <p class="required">*</p>
+
+      <i class="fa fa-birthday-cake"> </i>
+      <input type="date" name="birthDate" required>
+      <p class="required">*</p>
+    </div>
+
+    <div class="input">
+      <i class="fa fa-graduation-cap"> </i>
+      <input type="text" name="school" placeholder="School" required>
+      <p class="required">*</p>
+    </div>
+
+    <div class="resumeInput">
+      <p>Resume
+        <div style="display: flex; justify-content: center;">
+          <p>URL:</p> <input type="url" name="resumeLink" />
+        </div>
+        or
+        <div style="display: flex; justify-content: center; margin-left: 12.12%;">
+          <p style="min-width: 105px;">Upload Resume:</p> <input type="file" name="resumeUpload" />
+        </div>
+      </p>
+    </div>
+
+    <div class="input">
+      <p>Gender<br>
+        <input type="radio" name="gender" value="male"> Male
+        <input type="radio" name="gender" value="female"> Female
+        <input type="radio" name="gender" value="other"> Other
+      </p>
+    </div>
+
+    <div class="input">
+      <p>Shirt Size<span class="required">*</span><br>
+        <input type="radio" name="shirtSize" value="s" required> Small
+        <input type="radio" name="shirtSize" value="m" required> Medium
+        <input type="radio" name="shirtSize" value="l" required> Large
+        <input type="radio" name="shirtSize" value="xl" required> XL Large
+      </p>
+    </div>
+
+    <div>
+      <p>Dietary Restriction<br>
+        <textarea name="dietaryRestriction" placeholder="ex. Vegan/Vegitarian"></textarea>
+      </p>
+    </div>
+
+    <div>
+      <p>Accomodations<br>
+        <textarea name="accommodations"></textarea>
+      </p>
+    </div>
+
+    <div>
+      <p>Additional Comments<br>
+        <textarea name="additionalComent"></textarea>
+      </p>
+    </div>
+
+    <input type="reset" />
+    <input type="submit" />
+
+  </form>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.0.0/jquery-migrate.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://dl.dropbox.com/s/5cal5lf0xlgh997/jquery.sliderPro.min.js"></script>
+<script src="https://dl.dropbox.com/s/f205medv0hrarqp/jquery.stellar.js"></script>
+<script src="js/apply.js"></script>
+
+</html>

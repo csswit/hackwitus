@@ -1,0 +1,98 @@
+@font-face {
+  font-family: "Simplifica";
+  src: url(https://dl.dropbox.com/s/q0aufqei4eiqxub/SIMPLIFICA%20Typeface.ttf);
+}
+
+body, html {
+  padding: 0;
+  margin: 0;
+  background-color: #7a9598 !important;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+form {
+  padding: 15px 0;
+  margin: 30px 10%;
+  background-color: #DDECEF;
+  box-shadow: 1px 1px 1px #666;
+  border-radius: 10px;
+}
+
+h1#header {
+  margin-top: 0;
+}
+
+input[type="text"], input[type="email"] {
+  width: 50%;
+}
+
+input[type="tel"], input[type="date"], input[type="url"], input[type="file"], input[type="text"], input[type="email"] {
+  height: 30px;
+  margin-left: 5px
+}
+
+input[type="reset"], input[type="submit"] {
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px #666;
+  border: 0.1px solid #444;
+}
+
+input[type="submit"] {
+  background-color: #F76C6C;
+  color: white;
+}
+
+input[type="reset"] {
+  background-color: #fffbfb;
+}
+
+.compressedInput {
+  display: inline-flex;
+  flex-direction: row;
+  margin: 0 auto;
+}
+
+.input, .resumeInput {
+  background-color: white;
+  width: 70%;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px #666;
+}
+
+.input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px auto;
+  padding: 10px 0;
+}
+
+.resumeInput {
+  display: inline-block;
+}
+
+i {
+  width: 20px;
+}
+
+textarea {
+  width: 70%;
+  max-width: 70%;
+  height: 100px;
+}
+
+.required {
+  color: red;
+}
+
+@media screen and (max-width: 768px) {
+  form {
+    margin: 0;
+    border-radius: 0;
+  }
+  
+  .input, .wrapper {
+    width: 90%;
+  }
+}
