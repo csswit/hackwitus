@@ -40,32 +40,39 @@ $("#applicationForm").submit(e => {
     "accommodations": formData.get('accommodations'),
     "additionalComment": formData.get('additionalComment')
   }
-  console.log(newUserData)
+  // console.log(newUserData)
   const resumeFile = formData.get('resumeUpload');
-  if (resumeFile != null) {
-    newUserData.resumeURL = `${newUserData.name}_${newUserData.birthDate}_${newUserData.phoneNumber}`
-    uploadFileToAMZS3(resumeFile, newUserData.resumeURL)
+  console.log(resumeFile)
+  if (resumeFile.name != "") {
+    const birthDate = new Date(newUserData.birthDate).toISOString().slice(0,10).replace(/-/g,"");
+    newUserData.resumeURL = `${newUserData.name}_${birthDate}_${newUserData.phoneNumber}`
+    uploadFileToAMZS3ThenSubmitNewUser(resumeFile, newUserData.resumeURL, newUserData)
+  } else if (newUserData.resumeURL != ""){
+    submitNewUser(newUserData)
+  } else {
+    alert("Please upload your resume!")
   }
-
-  $.post("https://hackwitus-fall-2017-reg-app.herokuapp.com/users/", newUserData)
-  .done((data) => {
-    console.log(data)
-    $(location).attr('href', 'success.html')
-  })
 })
 
-function uploadFileToAMZS3(file, fileName){
+function uploadFileToAMZS3ThenSubmitNewUser(file, fileName, newUser){
   const postFormData = new FormData();
   postFormData.append("Content-Type","multipart/form-data");
   postFormData.append("acl","public-read");
   postFormData.append("key",`${fileName}.${getExt(file.name)}`);
-  postFormData.append("file",file)
+  postFormData.append("file",file);
 
-  const xhr = new XMLHttpRequest();
+  const reqOptions = {
+    method:'POST',
+    body:postFormData
+  }
 
-  xhr.open('POST', 'http://hackwitus-fall2017-resume.s3.amazonaws.com/', true); //MUST BE LAST LINE BEFORE YOU SEND
+  fetch('http://hackwitus-fall2017-resume.s3.amazonaws.com/', reqOptions)
+  .then(res => { submitNewUser(newUser) });
+}
 
-  xhr.send(postFormData);
+function submitNewUser(data) {
+  $.post("https://hackwitus-fall-2017-reg-app.herokuapp.com/users/", data)
+  .done((data) => { $(location).attr('href', 'success.html') })
 }
 
 function getExt(filename){
