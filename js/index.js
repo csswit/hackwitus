@@ -16,11 +16,11 @@ $("#my-slider").sliderPro({
 });
 
 // WHEN READY CUE SLIDESHOW AND PARRALAX
-jQuery(document).ready(function($) {  
+jQuery(document).ready(function($) {
   $("#my-slider").sliderPro();
 
   $(window).stellar();
-  });  
+  });
 
 //OPENS THE MODAL TO DISPLAY SNAPCODE
 snapchat.onclick = function() {
@@ -41,7 +41,7 @@ window.onclick = function(event) {
 
 // AUTO HIDES/SHOWS NAVBAR
 $(window).on('scroll', function() {
- if ($(window).scrollTop() > $(".header").height()) {
+ if ($(window).scrollTop() > $(".header").height() - 1 ) {
    $('#navbar').show(400);
  } else {
    $('#navbar').hide(400);

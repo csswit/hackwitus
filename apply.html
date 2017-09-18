@@ -6,67 +6,96 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="stylesheet" type="text/css" href="style/apply.css" />
+  <link rel="stylesheet" type="text/css" href="style/style.css" />
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slider-pro/1.3.0/css/slider-pro.min.css" />
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+  <nav class="navbar navbar-default navbar-fixed-top" id="navbar">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <div class="navbar-brand">
+        </div>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+      </button>
+      </div>
+      <div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li><a class="navbar-brand" href="index.html"><img class="navbar-logo" src="images/logo1.png"></a></li>
+            <li><a class="navbar-text" href="index.html">Home</a></li>
+          </ul>
+
+        </div>
+      </div>
+
+    </div>
+  </nav>
 
 </head>
 
 <body>
   <form id="applicationForm">
     <h1 id="header">HackWITus Registration</h1>
+    <p>* is required</p>
+    <p id="warning"></p>
     <div class="input">
       <i class="fa fa-user"> </i>
       <input type="text" name="name" placeholder="Name" required />
-      <p class="required">*</p>
+      <b class="required">*</b>
     </div>
 
     <div class="input">
       <i class="fa fa-envelope"> </i>
       <input type="email" name="email" placeholder="Email" required>
-      <p class="required">*</p>
+      <b class="required">*</b>
     </div>
 
     <div class="compressedInput input">
       <i class="fa fa-phone"> </i>
       <input type="tel" name="phoneNumber" placeholder="123-456-7890" required>
-      <p class="required">*</p>
+      <b class="required">*</b>
 
       <i class="fa fa-birthday-cake"> </i>
       <input type="date" name="birthDate" required>
-      <p class="required">*</p>
+      <b class="required">*</b>
     </div>
 
     <div class="input">
       <i class="fa fa-graduation-cap"> </i>
       <input type="text" name="school" placeholder="School" required>
-      <p class="required">*</p>
+      <b class="required">*</b>
     </div>
 
     <div class="resumeInput">
-      <p>Resume
+      <p><strong>Resume<b class="required">*</b></strong>
         <div style="display: flex; justify-content: center;">
-          <p>URL:</p> <input type="url" name="resumeLink" id="resumeLink" />
+          <strong>URL:</strong> <input type="url" name="resumeLink" id="resumeLink" />
         </div>
         or
         <div style="display: flex; justify-content: center; margin-left: 12.12%;" id="fileUpload">
-          <p style="min-width: 105px;">Upload Resume:</p> <input type="file" name="resumeUpload" id="resumeFile"/>
+          <strong style="min-width: 105px;">Upload Resume:</strong> <input type="file" name="resumeUpload" id="resumeFile"/>
         </div>
       </p>
     </div>
 
     <div class="input">
-      <p>Gender<br>
+      <p><strong>Gender</strong><br/>
+      <i>The goal of this question is to help us improving gender inclusivity. Please note that this is optional.</i><br/>
         <input type="radio" name="gender" value="male"/> Male
         <input type="radio" name="gender" value="female"/> Female
-        <input type="radio" name="gender" value="other"/>
+        <input type="radio" name="gender" value=""/>
         <input type="text" name="gender" placeholder="other"/>
       </p>
     </div>
 
     <div class="input">
-      <p>Shirt Size<span class="required">*</span><br>
+      <p><strong>Shirt Size<b class="required">*</b></strong><br/>
+        Size references can be found <a href="https://www.customink.com/items/sizing/15000_lineup/standard.htm">here</a><br/>
         <input type="radio" name="shirtSize" value="s" required> Small
         <input type="radio" name="shirtSize" value="m" required> Medium
         <input type="radio" name="shirtSize" value="l" required> Large
@@ -75,19 +104,19 @@
     </div>
 
     <div>
-      <p>Dietary Restriction<br>
-        <textarea name="dietaryRestriction" placeholder="ex. Vegan/Vegitarian"></textarea>
+      <p><strong>Dietary Restriction</strong><br/>
+        <textarea name="dietaryRestriction" placeholder="ex. Vegan/Vegetarian"></textarea>
       </p>
     </div>
 
     <div>
-      <p>Accomodations<br>
+      <p><strong>Accomodations</strong><br>
         <textarea name="accommodations"></textarea>
       </p>
     </div>
 
     <div>
-      <p>Additional Comments<br>
+      <p><strong>Additional Comments</strong><br>
         <textarea name="additionalComent"></textarea>
       </p>
     </div>

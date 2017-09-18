@@ -40,11 +40,11 @@
 
     </div>
   </nav>
+
 </head>
 
 
 <div class="wrapper">
-
 
 
   <div class="header">
@@ -78,10 +78,9 @@
 
       <div class="header-text" style="color: white;"> <b>November 18-19th 2017 <br> Boston, MA</b></div>
 
-      <div><button class="btn btn-primary btn-round-large" id="applyBtn">Apply Now</button></div>
+      <div><a href="apply.html"><button class="btn btn-primary btn-round-large" id="applyBtn">Apply Now</button></a></div>
 
-
-      <div class="page-scroll text-center">
+      <div class=" page-scroll text-center">
         <a class="btn btn-circle" href="#about">
           <i class="fa fa-angle-down fa-2x animated" style="font-size: 4em;"></i>
         </a>
@@ -261,8 +260,9 @@
 
     <div class="team" id="team">
       <h1 class="heading">Meet Our Team</h1>
+      <p>[insert organizers here]</p>
       <div class="container">
-        <div class="row">
+      <!--   <div class="row">
           <div class="col-md-3 col-sm-6 col-xs-6">
             <div class="team-img-container" data-content="Dat Do">
               <a href="https://www.linkedin.com/in/datdo/" target="_blank">
@@ -346,7 +346,7 @@
               </a>
             </div>
           </div>
-        </div>
+        </div>-->
       </div>
     </div>
 
@@ -356,24 +356,9 @@
       <h1 class="heading">Got Questions?</h1>
       <p>Shoot us a message!</p>
       <form>
-        <div class="form-group row">
-          <div class="col-10">
-            <label for="Name" class="col-2 col-form-label">Name: </label>
-            <input type="text" name="name" placeholder="Name" required />
-          </div>
-        </div>
-        <div class="form-group row">
-          <div class="col-10">
-            <label for="Name" class="col-2 col-form-label">Email: </label>
-            <input type="email" name="email" placeholder="Email" required><br/>
-          </div>
-        </div>
-        <div class="form-group row">
-          <label for="Name" class="col-2 col-form-label">Questions/Comments: </label>
-          <div class="col-10">
-            <textarea id="textarea" name="questions" placeholder="Questions/Comments?" required></textarea><br/>
-          </div>
-        </div>
+        <input type="text" name="name" placeholder="Name" required />
+        <input type="email" name="email" placeholder="Email" required><br/>
+        <textarea id="textarea" name="questions" placeholder="Questions/Comments?" required></textarea><br/>
         <input type="reset" />
         <input type="submit" />
       </form>
