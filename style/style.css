@@ -106,25 +106,31 @@ p, h3 {
 
 .header-text {
   position: absolute;
-  margin-top: 20%;
+  bottom: 30%;
   left: 0;
   right: 0;
   font-size: 4rem;
 }
 
 #applyBtn, #applyBtn-nav {
+  height: 8rem;
   border-radius: 50px;
   background-color: #f76c6c;
   color: white;
   border: black;
+  position: absolute;
+  bottom: 10%;
+  margin: auto;
 }
 
 #applyBtn {
-  margin-top: 8%;
+  left: 0;
+  right: 0;
+  bottom: 10%;
   width: 18%;
   min-width: 200px;
   height: 8rem;
-  /*position: absolute;*/
+  position: absolute;
 }
 
 #applyBtn-nav {
