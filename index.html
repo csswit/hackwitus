@@ -12,11 +12,6 @@
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slider-pro/1.3.0/css/slider-pro.min.css" />
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
-</head>
-
-
-<div class="wrapper">
-
   <nav class="navbar navbar-default navbar-fixed-top" id="navbar">
     <div class="container-fluid">
       <div class="navbar-header">
@@ -25,24 +20,31 @@
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
-          <span class="icon-bar"></span>               
+          <span class="icon-bar"></span>
       </button>
-        <a class="navbar-brand" href="#">Home</a>
-        <a class="navbar-brand" id="navBtn"><button id="applyBtn-nav">Apply Now</button></a>
       </div>
       <div>
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav">
-            <li><a href="#about">About</a></li>
-            <li><a href="#schedule">Schedule</a></li>
-            <li><a href="#faq">FAQ</a></li>
-            <li><a href="#sponsors">Sponsors</a></li>
-            <li><a href="#team">Team</a></li>
+            <li><a class="navbar-brand" href="#"><img class="navbar-logo" src="images/logo1.png"></a></li>
+            <li><a class="navbar-text" href="#about">About</a></li>
+            <li><a class="navbar-text" href="#schedule">Schedule</a></li>
+            <li><a class="navbar-text" href="#faq">FAQ</a></li>
+            <li><a class="navbar-text" href="#sponsors">Sponsors</a></li>
+            <li><a class="navbar-text" href="#team">Team</a></li>
           </ul>
+          <a class="navbar-brand" href="apply.html" id="navBtn"><button id="applyBtn-nav">Apply Now</button></a>
+
         </div>
       </div>
+
     </div>
   </nav>
+</head>
+
+
+<div class="wrapper">
+
 
 
   <div class="header">
@@ -74,9 +76,11 @@
 
       <img src="https://dl.dropbox.com/s/icfgz9k8by8gsn9/logo-white.png" id="logo">
 
-      <div class="header-text" style="color: white;"> <b>November 18-19th 2017 <br> Boston, MA</b></div>
+      <div class="header-text" style="color: white;">
+        <b>November 18-19th 2017 <br/> Boston, MA</b><br/>
+        <a href="apply.html"><button class="btn btn-primary btn-round-large" id="applyBtn">Apply Now</button></a>
+      </div>
 
-      <div><button class="btn btn-primary btn-round-large" id="applyBtn">Apply Now</button></div>
 
       <div class="page-scroll text-center">
         <a class="btn btn-circle" href="#about">
@@ -96,21 +100,21 @@
       <div class="container about-container">
         <div class="row">
           <div class="about-sec col-md-4">
-            <h2 class="about-header">What</h2>
-            <p>A free 24-hour programming/making event filled with passionate people, food, tools, and friendly competition.</p>
+            <h2 class="about-header"><strong>What</strong></h2>
+            <p align="left">A free 24-hour programming/making event filled with passionate people, food, tools, and friendly competition.</p>
           </div>
           <div class="about-sec col-md-4">
-            <h2 class="about-header">Community</h2>
-            <p>Mentors, staff, and other participants are more than happy to assist in any way we can.</p>
+            <h2 class="about-header"><strong>Community</strong></h2>
+            <p align="left">Mentors, staff, and other participants are more than happy to assist in any way we can.</p>
           </div>
           <div class="about-sec col-md-4">
-            <h2 class="about-header">Location</h2>
-            <p>Our Ira Allen building is a comfortable and modern space, perfect for a weekend of hacking.</p>
+            <h2 class="about-header"><strong>Location</strong></h2>
+            <p align="left">Our Ira Allen building is a comfortable and modern space, perfect for a weekend of hacking.</p>
           </div>
         </div>
       </div>
       <h1 class="heading">When and Where?</h1>
-      <p>Novemeber 18th-19th located in the <strong>Ira Allen Building, Parker Street, Boston, MA</strong></p>
+      <p><strong>Novemeber 18th-19th</strong> at <strong>Ira Allen Building, Parker Street, Boston, MA</strong></p>
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1474.6488368990135!2d-71.09450594426335!3d42.33617649815149!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e37a211bc4509f%3A0xdc4329c431caad5e!2sIra+Allen+Building%2C+Parker+St%2C+Boston%2C+MA+02120!5e0!3m2!1sen!2sus!4v1505071308705"
         width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
     </div>
@@ -121,7 +125,8 @@
     <div class="schedule" id="schedule">
       <h1 class="heading">Schedule</h1>
       <h3>Saturday, November 18th</h3>
-      <table id="firstTable">
+      <h4>TBD</h4>
+      <!-- <table id="firstTable">
         <tr>
           <th>Time</th>
           <th>Activity</th>
@@ -134,9 +139,10 @@
           <td>Time</td>
           <td>Activity</td>
         </tr>
-      </table>
+      </table> -->
       <h3>Sunday, November 19th</h3>
-      <table id="secondTable">
+      <h4>TBD</h4>
+      <!-- <table id="secondTable">
         <tr>
           <th>Time</th>
           <th>Activity</th>
@@ -149,7 +155,7 @@
           <td>Time</td>
           <td>Activity</td>
         </tr>
-      </table>
+      </table> -->
     </div>
 
     <!--     END SCHEDULE -->
@@ -351,12 +357,27 @@
       <h1 class="heading">Got Questions?</h1>
       <p>Shoot us a message!</p>
       <form>
-        <input type="text" name="name" placeholder="Name" required />
-        <input type="email" name="email" placeholder="Email" required><br/>
-        <textarea id="textarea" name="questions" placeholder="Questions/Comments?" required></textarea><br/>
-        <input type="clear" />
+        <div class="form-group row">
+          <div class="col-10">
+            <label for="Name" class="col-2 col-form-label">Name: </label>
+            <input type="text" name="name" placeholder="Name" required />
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-10">
+            <label for="Name" class="col-2 col-form-label">Email: </label>
+            <input type="email" name="email" placeholder="Email" required><br/>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="Name" class="col-2 col-form-label">Questions/Comments: </label>
+          <div class="col-10">
+            <textarea id="textarea" name="questions" placeholder="Questions/Comments?" required></textarea><br/>
+          </div>
+        </div>
+        <input type="reset" />
         <input type="submit" />
-      </form>      
+      </form>
     </div>
 
   </body>

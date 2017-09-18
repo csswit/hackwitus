@@ -95,6 +95,7 @@ p, h3 {
   min-width: 200px;
   padding-top: 20px;
   position: absolute;
+  margin-top: 1%;
   left: 3%;
 }
 
@@ -105,38 +106,31 @@ p, h3 {
 
 .header-text {
   position: absolute;
+  margin-top: 20%;
   left: 0;
   right: 0;
-  bottom: 30%;
   font-size: 4rem;
 }
 
 #applyBtn, #applyBtn-nav {
-  height: 8rem;
   border-radius: 50px;
   background-color: #f76c6c;
   color: white;
   border: black;
-  position: absolute;
-  bottom: 10%;
-  margin: auto;
 }
 
 #applyBtn {
-  left: 0;
-  right: 0;
-  bottom: 10%;
+  margin-top: 8%;
   width: 18%;
   min-width: 200px;
   height: 8rem;
-  position: absolute;
+  /*position: absolute;*/
 }
 
 #applyBtn-nav {
-  height: 4rem;
-  width: 12rem;
-  left: 50%;
-  transform: translate(-50%, 0);
+  height: 5rem;
+  width: 15rem;
+  min-height: 100%;
 }
 
 #navBtn {
@@ -342,7 +336,7 @@ img.team-img {
 /* END TEAM SEC */
 
 #textarea {
-  width: 70%; 
+  width: 70%;
   height: 200px;
   margin: 10px;
 }
@@ -419,8 +413,8 @@ img.team-img {
     left: 0;
     right: 0;
     margin: auto;
-    } 
-  
+    }
+
   #applyBtn {
     width: 20rem;
     height: 6rem;
@@ -429,7 +423,7 @@ img.team-img {
   #navBtn {
     left: 50%;
   }
-  
+
   #mlh-trust-badge {
     width: 60px;
   }
@@ -447,4 +441,10 @@ img.team-img {
     border-left: none;
     border-right: none;
   }
+}
+.navbar-logo{
+  height: auto;
+  width: auto;
+  max-width: 100%;
+  max-height: 250%;
 }
