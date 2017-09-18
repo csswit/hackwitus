@@ -25,6 +25,7 @@ $('#resumeFile').on('change',() =>{
 
 $("#applicationForm").submit(e => {
   e.preventDefault()
+  $("#applicationForm").hide();
   const rawFormData = document.forms.applicationForm;
   const formData = new FormData(rawFormData);
   const newUserData = {
@@ -39,7 +40,8 @@ $("#applicationForm").submit(e => {
     "dietaryRestriction": formData.get('dietaryRestriction'),
     "accommodations": formData.get('accommodations'),
     "additionalComment": formData.get('additionalComment')
-  }
+  };
+  $("#applicationForm").trigger('reset')
   // console.log(newUserData)
   const resumeFile = formData.get('resumeUpload');
   console.log(resumeFile)
@@ -50,6 +52,7 @@ $("#applicationForm").submit(e => {
   } else if (newUserData.resumeURL != ""){
     submitNewUser(newUserData)
   } else {
+    $("#applicationForm").show();
     alert("Please upload your resume!")
   }
 })
