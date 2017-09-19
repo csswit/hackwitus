@@ -138,13 +138,17 @@ p, h3 {
   height: 4rem;
   width: 12rem;
   left: 50%;
-  transform: translate(-50%, 0);
+  transform: translate(-50%, 35%);
 }
 
 #navBtn {
   position: absolute;
   left: 90%;
   transform: translate(-50%, 0);
+}
+
+.navbar-logo>img {
+  margin-top: 1px;
 }
 
 .container-fluid {
@@ -430,6 +434,10 @@ img.team-img {
 
   #navBtn {
     left: 50%;
+  }
+  
+  #applyBtn-nav {
+    transform: translate(-50%, 0);
   }
 
   #mlh-trust-badge {
