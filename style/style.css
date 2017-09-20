@@ -138,7 +138,7 @@ p, h3 {
   height: 4rem;
   width: 12rem;
   left: 50%;
-  transform: translate(-50%, 35%);
+  transform: translate(-50%, 40%);
 }
 
 #navBtn {
@@ -147,8 +147,12 @@ p, h3 {
   transform: translate(-50%, 0);
 }
 
-.navbar-logo>img {
-  margin-top: 1px;
+.navbar-logo{
+  height: auto;
+  width: auto;
+  max-width: 100%;
+  max-height: 250%;
+  margin-top: 0;
 }
 
 .container-fluid {
@@ -417,6 +421,15 @@ img.team-img {
   cursor: pointer;
 }
 
+@media screen and (max-width: 980px) {
+  .navbar-default .navbar-nav>li>a {
+    padding-left: 7px;
+    padding-right: 7px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   #logo {
     width: 70%;
@@ -434,6 +447,10 @@ img.team-img {
 
   #navBtn {
     left: 50%;
+  }
+  
+  .navbar-logo{
+    margin-top: -14px;
   }
   
   #applyBtn-nav {
@@ -458,13 +475,7 @@ img.team-img {
     border-right: none;
   }
 }
-.navbar-logo{
-  height: auto;
-  width: auto;
-  max-width: 100%;
-  max-height: 250%;
-  margin-top: -14px;
-}
+
 .panel-body{
   text-align: left;
 }
