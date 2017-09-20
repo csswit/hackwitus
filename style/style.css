@@ -62,7 +62,7 @@ p, h3 {
 #navbar {
 /*   background-color: white; */
   color: black;
-  /*display: none;*/
+  display: none;
   border-bottom: 1px solid lightgray;
 }
 
