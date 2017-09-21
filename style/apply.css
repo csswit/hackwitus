@@ -4,23 +4,23 @@
 }
 
 body, html {
-  padding: 0;
   margin: 0;
-  background-color: #7a9598 !important;
+  background-color: rgb(200,200,200) !important;
   text-align: center;
   font-family: 'Roboto', sans-serif;
+  font-size: 18px;
 }
 
 form {
   padding: 15px 0;
   margin: 30px 10%;
-  background-color: #DDECEF;
-  box-shadow: 1px 1px 1px #666;
+  background-color: rgb(222,222,222);
   border-radius: 10px;
 }
 
 h1#header {
   margin-top: 0;
+  padding-top: 8%;
 }
 
 input[type="text"], input[type="email"] {
@@ -33,9 +33,17 @@ input[type="tel"], input[type="date"], input[type="url"], input[type="file"], in
 }
 
 input[type="reset"], input[type="submit"] {
-  border-radius: 5px;
-  box-shadow: 2px 2px 2px #666;
-  border: 0.1px solid #444;
+  border-radius: 100px;
+  border: none;
+  font-family: "QuickSand";
+  font-size: 20px;
+
+  left: 0;
+  right: 0;
+  bottom: 10%;
+  width: 14%;
+  min-width: 200px;
+  height: 6rem;
 }
 
 input[type="submit"] {
@@ -56,15 +64,14 @@ input[type="reset"] {
 .input, .resumeInput {
   background-color: white;
   width: 70%;
-  border-radius: 5px;
-  box-shadow: 2px 2px 2px #666;
+  border-radius: 3px;
 }
 
 .input {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 10px auto;
+  margin: 7px auto;
   padding: 10px 0;
 }
 
@@ -72,6 +79,9 @@ input[type="reset"] {
   display: inline-block;
 }
 
+.link{
+  font-size: 14px;
+}
 i {
   width: 20px;
 }
@@ -80,6 +90,8 @@ textarea {
   width: 70%;
   max-width: 70%;
   height: 100px;
+  border: none;
+  border-radius: 3px;
 }
 
 .required {
@@ -99,4 +111,9 @@ textarea {
   .input, .wrapper {
     width: 90%;
   }
+
+  a{
+    font-size: 10px !important;
+  }
+
 }
