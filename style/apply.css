@@ -108,7 +108,7 @@ textarea {
     border-radius: 0;
   }
 
-  .input, .wrapper {
+  .input, .wrapper, .resumeInput {
     width: 90%;
   }
 
