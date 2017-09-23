@@ -27,24 +27,24 @@ $("#applicationForm").submit(e => {
   e.preventDefault()
   $("#applicationForm").hide();
   const rawFormData = document.forms.applicationForm;
-  const formData = new FormData(rawFormData);
+  // const formData = new FormData(rawFormData);
   const newUserData = {
-    "name": formData.get('name'),
-    "birthDate": formData.get('birthDate'),
-    "gender": formData.get('gender'),
-    "email": formData.get('email'),
-    "phoneNumber": formData.get('phoneNumber'),
-    "school": formData.get('school'),
-    "shirtSize": formData.get('shirtSize'),
-    "resumeURL": formData.get('resumeLink'),
-    "dietaryRestriction": formData.get('dietaryRestriction'),
-    "accommodations": formData.get('accommodations'),
-    "additionalComment": formData.get('additionalComment')
+    "name": rawFormData.name.value
+    "birthDate": rawFormData.birthDate.value
+    "gender": rawFormData.gender.value
+    "email": rawFormData.email.value
+    "phoneNumber": rawFormData.phoneNumber.value
+    "school": rawFormData.school.value
+    "shirtSize": rawFormData.shirtSize.value
+    "resumeURL": rawFormData.resumeLink.value,
+    "dietaryRestriction": rawFormData.dietaryRestriction.value,
+    "accommodations": rawFormData.accommodations.value,
+    "additionalComment": rawFormData.additionalComment.value
   };
   $("#applicationForm").trigger('reset')
   // console.log(newUserData)
-  const resumeFile = formData.get('resumeUpload');
-  console.log(resumeFile)
+  const resumeFile = rawFormData.resumeUpload.files[0];
+
   if (resumeFile.name != "") {
     const birthDate = new Date(newUserData.birthDate).toISOString().slice(0,10).replace(/-/g,"");
     newUserData.resumeURL = `${newUserData.name}_${birthDate}_${newUserData.phoneNumber}`
