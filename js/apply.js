@@ -29,13 +29,13 @@ $("#applicationForm").submit(e => {
   const rawFormData = document.forms.applicationForm;
   // const formData = new FormData(rawFormData);
   const newUserData = {
-    "name": rawFormData.name.value
-    "birthDate": rawFormData.birthDate.value
-    "gender": rawFormData.gender.value
-    "email": rawFormData.email.value
-    "phoneNumber": rawFormData.phoneNumber.value
-    "school": rawFormData.school.value
-    "shirtSize": rawFormData.shirtSize.value
+    "name": rawFormData.name.value,
+    "birthDate": rawFormData.birthDate.value,
+    "gender": rawFormData.gender.value,
+    "email": rawFormData.email.value,
+    "phoneNumber": rawFormData.phoneNumber.value,
+    "school": rawFormData.school.value,
+    "shirtSize": rawFormData.shirtSize.value,
     "resumeURL": rawFormData.resumeLink.value,
     "dietaryRestriction": rawFormData.dietaryRestriction.value,
     "accommodations": rawFormData.accommodations.value,
