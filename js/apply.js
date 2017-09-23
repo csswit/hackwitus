@@ -41,20 +41,19 @@ $("#applicationForm").submit(e => {
     "accommodations": rawFormData.accommodations.value,
     "additionalComment": rawFormData.additionalComment.value
   };
-  $("#applicationForm").trigger('reset')
   // console.log(newUserData)
-  const resumeFile = rawFormData.resumeUpload.files[0];
-
-  if (resumeFile.name != "") {
+  const resumeUploadedFile = rawFormData.resumeUpload.files[0]
+  if (resumeUploadedFile.name != "") {
     const birthDate = new Date(newUserData.birthDate).toISOString().slice(0,10).replace(/-/g,"");
     newUserData.resumeURL = `${newUserData.name}_${birthDate}_${newUserData.phoneNumber}`
-    uploadFileToAMZS3ThenSubmitNewUser(resumeFile, newUserData.resumeURL, newUserData)
+    uploadFileToAMZS3ThenSubmitNewUser(resumeUploadedFile, newUserData.resumeURL, newUserData)
   } else if (newUserData.resumeURL != ""){
     submitNewUser(newUserData)
   } else {
     $("#applicationForm").show();
     alert("Please upload your resume!")
   }
+  $("#applicationForm").trigger('reset')
 })
 
 function uploadFileToAMZS3ThenSubmitNewUser(file, fileName, newUser){
