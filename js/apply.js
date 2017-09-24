@@ -35,7 +35,6 @@ $("#school").autocomplete({
 
 $("#applicationForm").submit(e => {
   e.preventDefault()
-  console.log(schoolList)
   $("#applicationForm").hide();
   const rawFormData = document.forms.applicationForm;
   const newUserData = {
@@ -82,6 +81,7 @@ function uploadFileToAMZS3ThenSubmitNewUser(file, fileName, newUser){
 }
 
 function submitNewUser(data) {
+  $("#school").autocomplete("destroy")
   $("#loadingSection").show()
   $.post("https://hackwitus-fall-2017-reg-app.herokuapp.com/users/", data)
   .done((data) => { $(location).attr('href', 'success.html') })
