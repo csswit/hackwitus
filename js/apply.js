@@ -6,7 +6,9 @@ $('#resumeLink').on('change',() => {
     $('#resumeUpload').show()
   }
 })
-
+$(window).on('load',() => {
+  $("#loadingSection").hide()
+})
 const schoolListArray =  schoolList.split("\n")
 
 
@@ -49,7 +51,6 @@ $("#applicationForm").submit(e => {
     "accommodations": rawFormData.accommodations.value,
     "additionalComment": rawFormData.additionalComment.value
   };
-  // console.log(newUserData)
   const resumeUploadedFile = rawFormData.resumeUpload.files[0]
   if (resumeUploadedFile.name != "") {
     const birthDate = new Date(newUserData.birthDate).toISOString().slice(0,10).replace(/-/g,"");
@@ -81,6 +82,7 @@ function uploadFileToAMZS3ThenSubmitNewUser(file, fileName, newUser){
 }
 
 function submitNewUser(data) {
+  $("#loadingSection").show()
   $.post("https://hackwitus-fall-2017-reg-app.herokuapp.com/users/", data)
   .done((data) => { $(location).attr('href', 'success.html') })
 }
