@@ -24,7 +24,8 @@ h1, h3 {
 }
 
 h1 {
-  padding: 50px 0;
+  padding-top: 50px;
+  padding-bottom: 25px ;
   color: rgb(32,115,184);
   font-family: "Simplifica";
   font-weight: bold;
@@ -114,6 +115,7 @@ p, h3 {
 }
 
 #applyBtn, #applyBtn-nav {
+  outline: none;
   height: 8rem;
   border-radius: 50px;
   background-color: rgb(32,115,184);
@@ -122,6 +124,14 @@ p, h3 {
   position: absolute;
   bottom: 10%;
   margin: auto;
+}
+
+#applyBtn:hover, #applyBtn-nav:hover {
+  background-color: rgb(25,94,150);
+}
+
+#applyBtn:active, #applyBtn-nav:active {
+  background-color: rgb(21,79,127);
 }
 
 #applyBtn {
@@ -478,4 +488,37 @@ img.team-img {
 
 .panel-body{
   text-align: left;
+}
+/*CONTACT FORM*/
+input[type="text"],input[type="email"],textarea{
+  padding-top: 5px;
+  padding-left: 10px;
+  border: 1px solid rgb(200,200,200);
+  border-radius: 10px;
+}
+textarea{
+  width: 47%;
+  height: 200px;
+}
+input[type="submit"] {
+  border: none;
+  font-size: 20px;
+
+  left: 0;
+  right: 0;
+  bottom: 10%;
+  width: 14%;
+  min-width: 200px;
+  height: 6rem;
+  background-color: rgb(32,115,184);
+  color: white;
+  margin-left: 20px;
+}
+
+input[type="submit"]:hover {
+  background-color: rgb(25,94,150);
+}
+
+input[type="submit"]:active {
+  background-color: rgb(21,79,127);
 }

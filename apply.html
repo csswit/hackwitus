@@ -17,8 +17,7 @@
 <body>
   <form id="applicationForm">
     <h1 id="header"><strong>Registration Form</strong></h1>
-    <p><b class="required">*</b><strong> is required</strong></p>
-    <p id="warning"></p>
+    <p class="description"><b class="required">*</b><strong> is required</strong></p>
 
     <div class="input">
       <i class="fa fa-user"> </i>
@@ -89,24 +88,24 @@
     </div>
 
 
-    <div>
+    <div class="inlineInput">
       <h4><strong>Dietary Restriction</strong></h4>
       <div class="inputBlock">
-        <textarea name="dietaryRestriction" placeholder="ex. Vegan/Vegetarian"></textarea>
+        <textarea name="dietaryRestriction" placeholder="ex. Vegan/Vegetarian, Food Allergies, etc"></textarea>
       </div>
     </div>
 
-    <div>
+    <div class="inlineInput">
       <h4><strong>Accomodations</strong></h4>
       <div class="inputBlock">
-        <textarea name="accommodations"></textarea>
+        <textarea name="accommodations" placeholder="Please list any accommodation that you would need"></textarea>
       </div>
     </div>
 
-    <div>
+    <div class="inlineInput">
       <h4><strong>Additional Comments</strong></h4>
       <div class="inputBlock">
-        <textarea name="additionalComment"></textarea>
+        <textarea name="additionalComment" placeholder="Any other questions?"></textarea>
       </div>
     </div>
 

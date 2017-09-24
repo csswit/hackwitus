@@ -93,6 +93,10 @@ textarea:focus, input:focus{
     outline: none;
 }
 
+textarea:focus {
+  border: 1px solid blue !important;
+}
+
 input{
   border: none;
   border-bottom: 1px solid black;
@@ -120,9 +124,9 @@ input[type="url"], input[type="file"], input[type="text"], input[type="email"] {
 input[type="reset"], input[type="submit"] {
   border-radius: 100px;
   border: none;
-  font-family: "QuickSand";
   font-size: 20px;
 
+  margin-top: 15px;
   left: 0;
   right: 0;
   bottom: 10%;
@@ -136,6 +140,10 @@ label{
 }
 label:focus{
   color: blue;
+}
+
+textarea{
+  border: 1px solid rgb(200,200,200) !important;
 }
 
 .option-input {
@@ -156,13 +164,13 @@ label:focus{
   border: none;
   color: #fff;
   cursor: pointer;
-  outline: none;
+  outline: none !important;
 }
 .option-input:hover {
   background: #9faab7;
 }
 .option-input:checked {
-  background: #40e0d0;
+  background: rgb(32,115,184);
 }
 .option-input:checked::before {
   height: 20px;
@@ -170,7 +178,7 @@ label:focus{
   text-align: center;
 }
 .option-input:checked::after {
-  background: #40e0d0;
+  background: rgb(32,115,184);
   position: relative;
 }
 
@@ -178,10 +186,28 @@ label:focus{
 input[type="submit"] {
   background-color: rgb(32,115,184);
   color: white;
+  margin-left: 20px;
+}
+
+input[type="submit"]:hover {
+  background-color: rgb(25,94,150);
+}
+
+input[type="submit"]:active {
+  background-color: rgb(21,79,127);
 }
 
 input[type="reset"] {
-  background-color: #fffbfb;
+  background-color: #fff;
+  margin-right: 20px;
+}
+
+input[type="reset"]:hover {
+  background-color: rgb(200,200,200);
+}
+
+input[type="reset"]:active {
+  background-color: rgb(170,170,170);
 }
 
 .input, .resumeInput, .inlineInput {
