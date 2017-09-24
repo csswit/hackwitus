@@ -1,9 +1,9 @@
 $('#resumeLink').on('change',() => {
   const link = document.getElementById("resumeLink").value
   if (isURL(link)) {
-    $('#fileUpload').hide()
+    $('#resumeUpload').hide()
   } else {
-    $('#fileUpload').show()
+    $('#resumeUpload').show()
   }
 })
 
@@ -27,7 +27,6 @@ $("#applicationForm").submit(e => {
   e.preventDefault()
   $("#applicationForm").hide();
   const rawFormData = document.forms.applicationForm;
-  // const formData = new FormData(rawFormData);
   const newUserData = {
     "name": rawFormData.name.value,
     "birthDate": rawFormData.birthDate.value,

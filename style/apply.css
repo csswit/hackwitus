@@ -1,35 +1,70 @@
+*{font-family: 'Roboto', sans-serif;}
+
 @font-face {
   font-family: "Simplifica";
   src: url(https://dl.dropbox.com/s/q0aufqei4eiqxub/SIMPLIFICA%20Typeface.ttf);
 }
-
+.header{
+  text-align: center;
+  max-width: 100%;
+  height: auto;
+  width: auto\9; /* ie8 */
+  margin: auto;
+}
 body, html {
   margin: 0;
   background-color: rgb(200,200,200) !important;
   text-align: center;
   font-family: 'Roboto', sans-serif;
   font-size: 18px;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  text-align: center;
 }
 
+h4{
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.description{
+  font-style: italic;
+}
+
+
 form {
-  padding: 15px 0;
+  padding: 20px 0;
   margin: 30px 10%;
   background-color: rgb(222,222,222);
   border-radius: 10px;
 }
 
-h1#header {
-  margin-top: 0;
-  padding-top: 8%;
+textarea:focus, input:focus{
+    outline: none;
+}
+
+input{
+  border: none;
+  border-bottom: 1px solid black;
+}
+
+input:focus{
+  border-bottom: 2px solid blue;
 }
 
 input[type="text"], input[type="email"] {
   width: 50%;
 }
 
-input[type="tel"], input[type="date"], input[type="url"], input[type="file"], input[type="text"], input[type="email"] {
+input[type="tel"], input[type="date"] {
   height: 30px;
-  margin-left: 5px
+  margin-left: 5px;
+}
+
+input[type="url"], input[type="file"], input[type="text"], input[type="email"] {
+  height: 30px;
+  width: 40%;
+  margin-left: 5px;
 }
 
 input[type="reset"], input[type="submit"] {
@@ -45,6 +80,50 @@ input[type="reset"], input[type="submit"] {
   min-width: 200px;
   height: 6rem;
 }
+label{
+  margin-left: 5px;
+  margin-right: 10px;
+}
+label:focus{
+  color: blue;
+}
+
+.option-input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  position: relative;
+  border-radius: 50%;
+  top: 5px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background: #cbd1d8;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  outline: none;
+}
+.option-input:hover {
+  background: #9faab7;
+}
+.option-input:checked {
+  background: #40e0d0;
+}
+.option-input:checked::before {
+  height: 20px;
+  width: 20px;
+  text-align: center;
+}
+.option-input:checked::after {
+  background: #40e0d0;
+  position: relative;
+}
+
 
 input[type="submit"] {
   background-color: #F76C6C;
@@ -55,13 +134,7 @@ input[type="reset"] {
   background-color: #fffbfb;
 }
 
-.compressedInput {
-  display: inline-flex;
-  flex-direction: row;
-  margin: 0 auto;
-}
-
-.input, .resumeInput {
+.input, .resumeInput, .inlineInput {
   background-color: white;
   width: 70%;
   border-radius: 3px;
@@ -75,10 +148,19 @@ input[type="reset"] {
   padding: 10px 0;
 }
 
-.resumeInput {
-  padding-top: 10px;
-  display: inline-block;
+.inlineInput {
+  justify-content: center;
+  align-items: center;
+  margin: 7px auto;
+  padding: 10px 0;
+
 }
+
+.compressedInput{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
 
 .link{
   font-size: 14px;
