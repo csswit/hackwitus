@@ -25,7 +25,7 @@ h1, h3 {
 
 h1 {
   padding: 50px 0;
-  color: #f76c6c;
+  color: rgb(32,115,184);
   font-family: "Simplifica";
   font-weight: bold;
 }
@@ -116,7 +116,7 @@ p, h3 {
 #applyBtn, #applyBtn-nav {
   height: 8rem;
   border-radius: 50px;
-  background-color: #f76c6c;
+  background-color: rgb(32,115,184);
   color: white;
   border: black;
   position: absolute;
@@ -368,7 +368,7 @@ img.team-img {
 .social-media-icons i {
   padding: 15px 10px 25px;
   font-size: 30px;
-  color: #f76c6c;
+  color: rgb(32,115,184);
 }
 
 .social-media-icons i:hover {
@@ -448,11 +448,11 @@ img.team-img {
   #navBtn {
     left: 50%;
   }
-  
+
   .navbar-logo{
     margin-top: -14px;
   }
-  
+
   #applyBtn-nav {
     transform: translate(-50%, 0);
   }
