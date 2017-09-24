@@ -1,7 +1,7 @@
 *{font-family: 'Roboto', sans-serif;}
 
 @font-face {
-  font-family: "Simplifica";
+  font-family: "Roboto";
   src: url(https://dl.dropbox.com/s/q0aufqei4eiqxub/SIMPLIFICA%20Typeface.ttf);
 }
 .header{
@@ -176,7 +176,7 @@ label:focus{
 
 
 input[type="submit"] {
-  background-color: #F76C6C;
+  background-color: rgb(32,115,184);
   color: white;
 }
 
