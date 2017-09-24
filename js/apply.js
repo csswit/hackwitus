@@ -7,6 +7,9 @@ $('#resumeLink').on('change',() => {
   }
 })
 
+const schoolListArray =  schoolList.split("\n")
+
+
 function isURL(str) {
   var regex = /(http|https):\/\/(\w+:{0,1}\w*)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%!\-\/]))?/;
   return regex.test(str);
@@ -23,8 +26,14 @@ $('#resumeFile').on('change',() =>{
      }
  });
 
+$("#school").autocomplete({
+  maxShowItems: 5,
+  source: schoolListArray
+})
+
 $("#applicationForm").submit(e => {
   e.preventDefault()
+  console.log(schoolList)
   $("#applicationForm").hide();
   const rawFormData = document.forms.applicationForm;
   const newUserData = {
