@@ -1,7 +1,7 @@
 var modal = document.getElementById("myModal");
 var span = document.getElementsByClassName("close")[0];
 // var anchor_offset = $('a[href="#about"]').offset().top;
-
+new WOW().init()
 //MODIFIES IMAGE SLIDE SHOW
 $("#my-slider").sliderPro({
   width: "100%",
@@ -42,11 +42,28 @@ window.onclick = function(event) {
 
 // AUTO HIDES/SHOWS NAVBAR
 $(window).on('scroll', function() {
- if ($(window).scrollTop() > $(".header").height() - 1 ) {
+ if ($(window).scrollTop() > $(".header").height() - 150 ) {
    $('#navbar').show(400);
  } else {
    $('#navbar').hide(400);
  }
+});
+
+//Smooth scrolling
+// Select all links with hashes
+$('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+        || location.hostname == this.hostname) {
+
+        let target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+           if (target.length) {
+             $('html,body').animate({
+                 scrollTop: target.offset().top - 80
+            }, 500);
+            return false;
+        }
+    }
 });
 
 //AUTO CLOSES NAVBAR ON ITEM CLICK

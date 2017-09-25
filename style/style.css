@@ -108,7 +108,7 @@ p, h3 {
 
 .header-text {
   position: absolute;
-  bottom: 30%;
+  bottom: 50%;
   left: 0;
   right: 0;
   font-size: 4rem;
@@ -471,10 +471,6 @@ img.team-img {
     width: 60px;
   }
 
-  .header-text {
-    bottom: 25%;
-    font-size: 2.5rem;
-  }
 
   .about-container, iframe, table, .panel-group {
     width: 100%;

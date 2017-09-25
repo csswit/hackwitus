@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="stylesheet" type="text/css" href="style/style.css" />
+  <link rel="stylesheet" href="style/animate.css">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
   <link rel="stylesheet" type="text/css" href="https://rawgit.com/FortAwesome/Font-Awesome/master/css/font-awesome.min.css" />
   <link rel="stylesheet" type="text/css" href="https://rawgit.com/bqworks/slider-pro/master/dist/css/slider-pro.min.css" />
@@ -20,17 +21,18 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#"><img class="navbar-logo" src="images/logo1.png"></a>
+        <a id="navbarLogo" class="navbar-brand" href="#"><img class="navbar-logo" src="images/logo1.png"></a>
         <a class="navbar-brand" id="navBtn" href="apply.html"><button id="applyBtn-nav">Apply Now</button></a>
       </div>
       <div>
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav">
-            <li><a class="navbar-text" href="#about">About</a></li>
-            <li><a class="navbar-text" href="#schedule">Schedule</a></li>
-            <li><a class="navbar-text" href="#faq">FAQ</a></li>
-            <li><a class="navbar-text" href="#sponsors">Sponsors</a></li>
-            <li><a class="navbar-text" href="#team">Team</a></li>
+            <li><a id="navbarAbout" class="navbar-text" href="#about">About</a></li>
+            <li><a id="navbarSchedule" class="navbar-text" href="#schedule">Schedule</a></li>
+            <li><a id="navbarFAQ" class="navbar-text" href="#faq">FAQ</a></li>
+            <li><a id="navbarSponsors" class="navbar-text" href="#sponsors">Sponsors</a></li>
+            <li><a id="navbarTeam" class="navbar-text" href="#team">Team</a></li>
+            <li><a id="navbarContact" class="navbar-text" href="#contact">Contact Us</a></li>
           </ul>
         </div>
       </div>
@@ -71,14 +73,14 @@
 
       <a href="https://mlh.io/seasons/na-2018/events?utm_source=na-2018&utm_medium=TrustBadge&utm_campaign=na-2018&utm_content=gray" target="_blank"><img src="images/mlh-banner.svg" alt="Major League Hacking 2017 Hackathon Season" id="mlh-trust-badge"></a>
 
-      <img src="images/hack-logo-white.png" id="logo">
+      <img class="wow fadeInDown" src="images/hack-logo-white.png" id="logo">
 
-      <div class="header-text" style="color: white;"> <b>November 18-19th 2017 <br> Boston, MA</b></div>
+      <div class="wow zoomIn header-text" style="color: white;"> <b>November 18-19th 2017 <br> Boston, MA</b></div>
 
-      <div><a href="apply.html"><button class="btn btn-primary btn-round-large" id="applyBtn">Apply Now</button></a></div>
+      <div><a href="apply.html"><button class="wow zoomIn btn btn-primary btn-round-large" id="applyBtn">Apply Now</button></a></div>
 
-      <div class=" page-scroll text-center">
-        <a class="btn btn-circle" href="#about">
+      <div class="wow fadeInDown page-scroll text-center">
+        <a id="arrowBtn" class="btn btn-circle" href="#about">
           <i class="fa fa-angle-down fa-2x animated" style="font-size: 4em;"></i>
         </a>
       </div>
@@ -91,26 +93,26 @@
     <!--     START ABOUT -->
 
     <div class="about" id="about">
-      <h1 class="heading">Why Choose Us</h1>
+      <h1 class="wow fadeIn heading">Why Choose Us</h1>
       <div class="container-fluid about-container">
         <div class="row">
-          <div class="about-sec col-md-4">
+          <div class="wow fadeInLeft about-sec col-md-4">
             <h2 class="about-header"><strong>What</strong></h2>
             <p align="left">A free 24-hour programming/making event filled with passionate people, food, tools, and friendly competition.</p>
           </div>
-          <div class="about-sec col-md-4">
+          <div class="wow fadeInUp about-sec col-md-4">
             <h2 class="about-header"><strong>Community</strong></h2>
             <p align="left">Mentors, staff, and other participants are more than happy to assist in any way we can.</p>
           </div>
-          <div class="about-sec col-md-4">
+          <div class="wow fadeInRight about-sec col-md-4">
             <h2 class="about-header"><strong>Location</strong></h2>
             <p align="left">Our Ira Allen building is a comfortable and modern space, perfect for a weekend of hacking.</p>
           </div>
         </div>
       </div>
-      <h1 class="heading">When and Where?</h1>
-      <p><strong>Novemeber 18th-19th</strong> at <strong>Ira Allen Building, Parker Street, Boston, MA</strong></p>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1474.6488368990135!2d-71.09450594426335!3d42.33617649815149!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e37a211bc4509f%3A0xdc4329c431caad5e!2sIra+Allen+Building%2C+Parker+St%2C+Boston%2C+MA+02120!5e0!3m2!1sen!2sus!4v1505071308705"
+      <h1 class="wow fadeIn heading">When and Where?</h1>
+      <p class="wow fadeIn"><strong>Novemeber 18th-19th</strong> at <strong>Ira Allen Building, Parker Street, Boston, MA</strong></p>
+      <iframe class="wow fadeInUp" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1474.6488368990135!2d-71.09450594426335!3d42.33617649815149!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e37a211bc4509f%3A0xdc4329c431caad5e!2sIra+Allen+Building%2C+Parker+St%2C+Boston%2C+MA+02120!5e0!3m2!1sen!2sus!4v1505071308705"
         width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
     </div>
 
@@ -118,7 +120,7 @@
     <!--     START SCHEDULE -->
 
     <div class="schedule" id="schedule">
-      <h1 class="heading">Schedule</h1>
+      <h1 class="wow fadeIn heading">Schedule</h1>
       <h3>Saturday, November 18th</h3>
       <h4>TBD</h4>
       <!-- <table id="firstTable">
@@ -157,7 +159,7 @@
     <!--     START FAQ -->
 
     <div class="faq" id="faq">
-      <h1 class="heading">FAQ</h1>
+      <h1 class="wow fadeIn heading">FAQ</h1>
       <div class="panel-group" id="accordion">
         <div class="panel panel-default">
           <div class="panel-heading">
@@ -248,7 +250,7 @@
     <!--       START SPONSORS -->
 
     <div class="sponsors" id="sponsors">
-      <h1 class="heading">Sponsors</h1>
+      <h1 class="wow fadeIn heading">Sponsors</h1>
       <h3 class="heading">[Insert Sponsors Here]</h3>
     </div>
 
@@ -256,7 +258,7 @@
     <!--       TEAM SECTION -->
 
     <div class="team" id="team">
-      <h1 class="heading">Meet Our Team</h1>
+      <h1 class="wow fadeIn heading">Meet Our Team</h1>
       <p>[insert organizers here]</p>
       <div class="container">
       <!--   <div class="row">
@@ -349,27 +351,29 @@
 
     <!--       END TEAM SECTION -->
 
-    <div class="contact">
-      <h1 class="heading">Got Questions?</h1>
+    <div id="contact" class="contact">
+      <h1 class="wow fadeIn heading">Got Questions?</h1>
       <p>Shoot us a message!</p>
-      <form id="form" class="topBefore" action="https://formspree.io/contact@hackwit.us" method="POST" >
-        <div class="row">
-          <div class="col-md-3"></div>
-          <div class="col-md-3">
-            <input id="name" type="text" name="name" placeholder="Name" required />
+      <div class="container-fluid">
+        <form id="form" class="topBefore" action="https://formspree.io/contact@hackwit.us" method="POST" >
+          <div class="row">
+            <div class="col-md-3"></div>
+            <div class="wow fadeInLeft col-md-3">
+              <input id="name" type="text" name="name" placeholder="Name" required />
+            </div>
+            <div class="wow fadeInRight col-md-3">
+              <input id="email" type="email" name="_replyto" placeholder="Email" required />
+            </div>
+            <div class="col-md-3"></div>
+            <div class="wow fadeInUp col-md-12">
+              <textarea id="message" name="questions" placeholder="Questions/Comments?" required></textarea>
+            </div>
+            <div class="wow zoomIn col-md-12">
+              <input id="submit" type="submit" value="Send" />
+            </div>
           </div>
-          <div class="col-md-3">
-            <input id="email" type="email" name="_replyto" placeholder="Email" required />
-          </div>
-          <div class="col-md-3"></div>
-          <div class="col-md-12">
-            <textarea id="message" name="questions" placeholder="Questions/Comments?" required></textarea>
-          </div>
-          <div class="col-md-12">
-            <input id="submit" type="submit" value="Send" />
-          </div>
-        </div>
-      </form>
+        </form>
+      </div>
     </div>
 
   </body>
@@ -387,7 +391,7 @@
       </a>
       <i class="fa fa-snapchat" id="snapchat"></i>
       <div id="myModal" class="modal">
-        <div class="modal-content">
+        <div class="modal-content container-fluid">
           <span class="close">&times;</span>
           <h2>Add us on Snap ;)</h2>
           <img id="snapchat-img" src="images/snapchat-img.png">
@@ -402,6 +406,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.0.0/jquery-migrate.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
 <script src="https://rawgit.com/bqworks/slider-pro/master/dist/js/jquery.sliderPro.min.js"></script>
 <script src="https://rawgit.com/markdalgleish/stellar.js/master/src/jquery.stellar.js"></script>
 <script src="js/index.js"></script>
