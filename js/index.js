@@ -2,7 +2,7 @@ var modal = document.getElementById("myModal");
 var span = document.getElementsByClassName("close")[0];
 // var anchor_offset = $('a[href="#about"]').offset().top;
 
-if ($(window).width() < 768) {
+if ($(window).width() > 768) {
   console.log('a')
   new WOW().init()
 }
