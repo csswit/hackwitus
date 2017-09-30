@@ -432,7 +432,7 @@ img.team-img {
 }
 
 @media screen and (max-width: 678px) {
-  textarea {
+  #message {
     width: 304px;
   }
 }
@@ -491,7 +491,7 @@ img.team-img {
     border-right: none;
   }
   
-  textarea {
+  #message {
     width: 80%;
   }
 }
@@ -506,7 +506,7 @@ input[type="text"],input[type="email"],textarea{
   border: 1px solid rgb(200,200,200);
   border-radius: 10px;
 }
-textarea{
+#message {
   width: 47%;
   height: 200px;
 }
