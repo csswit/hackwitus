@@ -503,7 +503,6 @@ textarea{
 input[type="submit"] {
   border: none;
   font-size: 20px;
-
   left: 0;
   right: 0;
   bottom: 10%;
@@ -512,7 +511,7 @@ input[type="submit"] {
   height: 6rem;
   background-color: rgb(32,115,184);
   color: white;
-  margin-left: 20px;
+  border-radius: 50px;
 }
 
 input[type="submit"]:hover {
