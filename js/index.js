@@ -2,7 +2,7 @@ var modal = document.getElementById("myModal");
 var span = document.getElementsByClassName("close")[0];
 // var anchor_offset = $('a[href="#about"]').offset().top;
 
-if ($('.header').width() < 768) {
+if ($(window).width() < 768) {
   new WOW().init()
 }
 // new WOW().init()
@@ -25,7 +25,7 @@ jQuery(document).ready(function($) {
   $("#my-slider").sliderPro();
 
   $(window).stellar();
-  });
+});
 
 //OPENS THE MODAL TO DISPLAY SNAPCODE
 snapchat.onclick = function() {
