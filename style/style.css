@@ -431,6 +431,12 @@ img.team-img {
   cursor: pointer;
 }
 
+@media screen and (max-width: 678px) {
+  textarea {
+    width: 304px;
+  }
+}
+
 @media screen and (max-width: 980px) {
   .navbar-default .navbar-nav>li>a {
     padding-left: 7px;
@@ -483,6 +489,10 @@ img.team-img {
   .about-sec {
     border-left: none;
     border-right: none;
+  }
+  
+  textarea {
+    width: 80%;
   }
 }
 
