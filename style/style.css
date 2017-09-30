@@ -443,12 +443,16 @@ img.team-img {
 @media screen and (max-width: 768px) {
   #logo {
     width: 70%;
-    max-width: 430px;
+    max-width: 380px;
     padding-top: 110px;
     left: 0;
     right: 0;
     margin: auto;
     }
+  
+  #header-text {
+    bottom: 23%;
+  }
 
   #applyBtn {
     width: 20rem;
