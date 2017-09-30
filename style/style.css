@@ -108,7 +108,7 @@ p, h3 {
 
 .header-text {
   position: absolute;
-  bottom: 23%;
+  bottom: 40%;
   left: 0;
   right: 0;
   font-size: 4rem;
@@ -451,7 +451,7 @@ img.team-img {
     }
   
   .header-text {
-    bottom: 40%;
+    bottom: 23%;
   }
 
   #applyBtn {
