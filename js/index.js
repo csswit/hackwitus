@@ -1,7 +1,7 @@
 var modal = document.getElementById("myModal");
 var span = document.getElementsByClassName("close")[0];
 // var anchor_offset = $('a[href="#about"]').offset().top;
-new WOW().init()
+// new WOW().init()
 //MODIFIES IMAGE SLIDE SHOW
 $("#my-slider").sliderPro({
   width: "100%",
