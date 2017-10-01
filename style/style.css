@@ -469,12 +469,6 @@ input[type="submit"]:active {
   cursor: pointer;
 }
 
-@media screen and (max-width: 678px) {
-  #message {
-    width: 304px;
-  }
-}
-
 @media screen and (max-width: 980px) {
   .navbar-default .navbar-nav>li>a {
     padding-left: 7px;
@@ -531,6 +525,12 @@ input[type="submit"]:active {
   
   #message {
     width: 80%;
+  }
+}
+
+@media screen and (max-width: 678px) {
+  #message {
+    width: 304px;
   }
 }
 
