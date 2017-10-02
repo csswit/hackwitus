@@ -300,6 +300,13 @@ tr:nth-child(even) {
 }
 
 /* END FAQ */
+/* START SPONSOR SEC */
+.sponsor-img {
+  width: 40%;
+}
+
+
+/* END SPONSOR SEC */
 /* START TEAM SEC */
 
 .team-img-container {
