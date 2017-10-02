@@ -405,13 +405,6 @@ input[type="submit"]:active {
   background-color: rgb(21,79,127);
 }
 
-
-/* #textarea {
-   width: 70%; 
-  height: 200px;
-  margin: 10px;
-} */
-
 .footer {
   position: absolute;
   height: 100px;
@@ -521,6 +514,10 @@ input[type="submit"]:active {
 
   #applyBtn-nav {
     transform: translate(-50%, 0);
+  }
+  
+  #navbarContact {
+    display: initial;
   }
 
   #mlh-trust-badge {
