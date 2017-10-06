@@ -56,7 +56,7 @@ $(window).on('scroll', function() {
 
 //Smooth scrolling
 // Select all links with hashes
-$('a[href*=#]:not([href=#]):not([href=#collapse1])').click(function() {
+$('a[href*=#]:not([href=#]):not([href=#collapse1]):not([href=#collapse2]):not([href=#collapse3]):not([href=#collapse4]):not([href=#collapse5]):not([href=#collapse6]):not([href=#collapse7]):not([href=#collapse8])').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
         || location.hostname == this.hostname) {
 
