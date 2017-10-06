@@ -309,6 +309,10 @@ tr:nth-child(even) {
 /* END SPONSOR SEC */
 /* START TEAM SEC */
 
+.memberTitle {
+  font-size: 20px;
+}
+
 .team-img-container {
   position: relative;
   /*   VALUE FOR IMAGE WIDTH */
@@ -367,7 +371,6 @@ img.team-img {
 }
 
 /* END TEAM SEC */
-
 
 .panel-body{
   text-align: left;
