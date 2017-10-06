@@ -56,20 +56,20 @@ $(window).on('scroll', function() {
 
 //Smooth scrolling
 // Select all links with hashes
-$('a[href*=#]:not([href=#])').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
-        || location.hostname == this.hostname) {
+// $('a[href*=#]:not([href=#])').click(function() {
+//     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+//         || location.hostname == this.hostname) {
 
-        let target = $(this.hash);
-        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-           if (target.length) {
-             $('html,body').animate({
-                 scrollTop: target.offset().top - 80
-            }, 500);
-            return false;
-        }
-    }
-});
+//         let target = $(this.hash);
+//         target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+//            if (target.length) {
+//              $('html,body').animate({
+//                  scrollTop: target.offset().top - 80
+//             }, 500);
+//             return false;
+//         }
+//     }
+// });
 
 //AUTO CLOSES NAVBAR ON ITEM CLICK
 $('.navbar-collapse a').click(function(){
