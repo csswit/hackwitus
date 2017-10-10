@@ -10,7 +10,7 @@ $(window).on('load',() => {
   $("#loadingSection").hide()
 })
 const schoolListArray =  schoolList.split("\n")
-
+const validResumeType = ["pdf", "doc", "docx", "jpg", "ppt", "pptx", "jpeg"]
 
 function isURL(str) {
   var regex = /(http|https):\/\/(\w+:{0,1}\w*)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%!\-\/]))?/;
@@ -35,34 +35,52 @@ $("#school").autocomplete({
 
 $("#applicationForm").submit(e => {
   e.preventDefault()
-  $("#applicationForm").hide();
-  const rawFormData = document.forms.applicationForm;
-  const newUserData = {
-    "name": rawFormData.name.value,
-    "birthDate": rawFormData.birthDate.value,
-    "gender": rawFormData.gender.value,
-    "email": rawFormData.email.value,
-    "phoneNumber": rawFormData.phoneNumber.value,
-    "school": rawFormData.school.value,
-    "shirtSize": rawFormData.shirtSize.value,
-    "resumeURL": rawFormData.resumeLink.value,
-    "dietaryRestriction": rawFormData.dietaryRestriction.value,
-    "accommodations": rawFormData.accommodations.value,
-    "additionalComment": rawFormData.additionalComment.value
-  };
-  const resumeUploadedFile = rawFormData.resumeUpload.files[0]
-  if (resumeUploadedFile.name != "") {
-    const birthDate = new Date(newUserData.birthDate).toISOString().slice(0,10).replace(/-/g,"");
-    newUserData.resumeURL = `${newUserData.name}_${birthDate}_${newUserData.phoneNumber}`
-    uploadFileToAMZS3ThenSubmitNewUser(resumeUploadedFile, newUserData.resumeURL, newUserData)
-  } else if (newUserData.resumeURL != ""){
-    submitNewUser(newUserData)
-  } else {
-    $("#applicationForm").show();
-    alert("Please upload your resume!")
+  if (!($('#confirmation').is(':checked'))) {
+      alert("Please confirm that you are older than 18 and you will follow MLH and HackWITus policies")
   }
-  $("#applicationForm").trigger('reset')
+  else {
+    const rawFormData = document.forms.applicationForm;
+    const newUserData = {
+      "name": rawFormData.name.value,
+      "birthDate": "01/01/1990",
+      "gender": rawFormData.gender.value,
+      "email": rawFormData.email.value,
+      "phoneNumber": "123-456-789",
+      "school": rawFormData.school.value,
+      "shirtSize": rawFormData.shirtSize.value,
+      "resumeURL": rawFormData.resumeLink.value,
+      "dietaryRestriction": rawFormData.dietaryRestriction.value,
+      "accommodations": rawFormData.accommodations.value,
+      "additionalComment": rawFormData.additionalComment.value
+    };
+    const resumeUploadedFile = rawFormData.resumeUpload.files[0]
+    if (resumeUploadedFile.name != "") {
+      if (isValidFile(resumeUploadedFile.name)){
+        const randString = Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 10);
+        newUserData.resumeURL = `${newUserData.name}_${randString}`
+        uploadFileToAMZS3ThenSubmitNewUser(resumeUploadedFile, newUserData.resumeURL, newUserData)
+      } else {
+        alert("We only accept .pdf, .doc, .docx, .jpg, .ppt, .pptx, .jpeg")
+      }
+    } else if (newUserData.resumeURL != ""){
+      if (isURL(newUserData.resumeURL)) submitNewUser(newUserData)
+      else alert("Please provide a valid URL")
+    } else {
+      $("#applicationForm").show();
+      alert("Please upload your resume!")
+    }
+  }
 })
+
+function isValidFile(fileName){
+  const extension = getExt(fileName)
+  console.log(extension)
+  let result = false
+  validResumeType.forEach(acceptedType => {
+    if (extension.toString() == acceptedType.toString()) result = true
+  })
+  return result
+}
 
 function uploadFileToAMZS3ThenSubmitNewUser(file, fileName, newUser){
   const postFormData = new FormData();
@@ -81,6 +99,8 @@ function uploadFileToAMZS3ThenSubmitNewUser(file, fileName, newUser){
 }
 
 function submitNewUser(data) {
+  $("#applicationForm").trigger('reset')
+  $("#applicationForm").hide();
   $("#school").autocomplete("destroy")
   $("#loadingSection").show()
   $.post("https://hackwitus-fall-2017-reg-app.herokuapp.com/users/", data)
