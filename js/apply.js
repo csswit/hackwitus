@@ -54,7 +54,10 @@ $("#applicationForm").submit(e => {
       "additionalComment": rawFormData.additionalComment.value
     };
     const resumeUploadedFile = rawFormData.resumeUpload.files[0]
-    if (resumeUploadedFile.name != "") {
+    if (newUserData.resumeURL != "") {
+      if (isURL(newUserData.resumeURL)) submitNewUser(newUserData)
+      else alert("Please provide a valid URL")
+    } else if (resumeUploadedFile.name != "") {
       if (isValidFile(resumeUploadedFile.name)){
         const randString = Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 10);
         newUserData.resumeURL = `${newUserData.name}_${randString}`
@@ -62,9 +65,6 @@ $("#applicationForm").submit(e => {
       } else {
         alert("We only accept .pdf, .doc, .docx, .jpg, .ppt, .pptx, .jpeg")
       }
-    } else if (newUserData.resumeURL != ""){
-      if (isURL(newUserData.resumeURL)) submitNewUser(newUserData)
-      else alert("Please provide a valid URL")
     } else {
       $("#applicationForm").show();
       alert("Please upload your resume!")
