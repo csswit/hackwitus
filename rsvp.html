@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>HackWITus RSVP</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="style/apply.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://rawgit.com/FortAwesome/Font-Awesome/master/css/font-awesome.min.css" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <div>
+    <a href="index.html"><img class="header" src="images/logo1.png"></a>
+  <div>
+</head>
+
+<body>
+  <form id="rsvpForm">
+    <h1 id="header"><strong>HackWITus RSVP Form</strong></h1>
+    <p class="description"><b class="required">*</b><strong> is required</strong></p>
+
+    <div class="input">
+      <i class="fa fa-envelope"> </i>
+      <input type="email" name="email" placeholder="Email" required>
+      <b class="required">*</b>
+    </div>
+
+
+    <div class="inlineInput" align="left !important">
+      <h4><strong>RSVP</strong></h4>
+      <div class="inputBlock">
+        <p class="description">Please let us know if you are planning to attend the event</p>
+        <input type="radio" align="left !important" class="option-input " name="rsvp" value="y"/> <label for="y">Yes I will be there</label>
+        <input type="radio" class="option-input " name="rsvp" value="n"/> <label for="n">No, I am unable to attend</label>
+      </div>
+    </div>
+
+    <input type="reset" />
+    <input type="submit" />
+
+  </form>
+
+  <div id="loadingSection">
+    <img src="images/loading.gif">
+    <h2>Please wait while we process your profile</h2>
+  </div>
+
+  <div id="yesSection" class="boxed-area">
+    <img src="images/wow.gif" width="30%" height="30%">
+    <h2>Yay, can't wait to see you there!</h2>
+    <p>Please make sure to fill out our waiver form below: </p>
+    <a href="https://wentworth.az1.qualtrics.com/jfe/form/SV_cCKc4ZyW6vBiwMB"><input style="background-color:green !important" type="submit" value="Waiver Link"/></a>
+  </div>
+
+  <div id="noSection" class="boxed-area">
+    <img src="images/sad.gif" width="30%" height="30%">
+    <h2>There will always be next year...</h2>
+    <p>You can close this page now!</p><br/>
+  </div>
+
+  <div id="errorSection" class="boxed-area">
+    <img src="images/confuse.gif" width="30%" height="30%">
+    <h2>Seems like we couldn't find you on our database</h2>
+    <p>Please try to RSVP again!</p><br/>
+    <button id="redoRSVP">Re-do the RSVP</button>
+  </div>
+
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.0.0/jquery-migrate.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.3/jquery.csv.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="js/jquery_ui_autocomplete_improve.min.js"></script>
+<script src="js/formdata.js"></script>
+<script src="js/rsvp.js"></script>
+
+</html>

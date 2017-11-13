@@ -89,6 +89,13 @@ form {
   border-radius: 10px;
 }
 
+.boxed-area{
+  padding: 20px 0;
+  margin: 30px 10%;
+  background-color: rgb(222,222,222);
+  border-radius: 10px;
+}
+
 textarea:focus, input:focus{
     outline: none;
 }
@@ -121,10 +128,10 @@ input[type="url"], input[type="file"], input[type="text"], input[type="email"] {
   margin-left: 5px;
 }
 
-input[type="reset"], input[type="submit"] {
+input[type="reset"], input[type="submit"],button {
   border-radius: 100px;
   border: none;
-  font-size: 20px;
+  font-size: 20px !important;
 
   margin-top: 15px;
   left: 0;
@@ -183,17 +190,17 @@ textarea{
 }
 
 
-input[type="submit"] {
+button, input[type="submit"] {
   background-color: rgb(32,115,184);
-  color: white;
+  color: white !important;
   margin-left: 20px;
 }
 
-input[type="submit"]:hover {
+button:hover, input[type="submit"]:hover {
   background-color: rgb(25,94,150);
 }
 
-input[type="submit"]:active {
+button:active, input[type="submit"]:active {
   background-color: rgb(21,79,127);
 }
 
@@ -252,6 +259,7 @@ textarea {
   border: none;
   border-radius: 3px;
 }
+
 
 .required {
   color: red;
